@@ -1,0 +1,90 @@
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .wrap {
+    width: 1000px; }
+
+  .search_new .search .so input[type="text"] {
+    width: 500px; }
+
+  .finance .fl .list ul li .f3 {
+    right: -650px; }
+
+  .finance .fl .list ul li .f1 {
+    left: -630px; }
+
+  .finance .fl .list ul li .f2 {
+    left: -630px; }
+
+  .search_new .search {
+    width: 670px; }
+    .search_new .search .so input {
+      width: 420px; }
+    .search_new .search .keyword {
+      width: 576px; }
+
+  .menu_new .nav ul.link li {
+    margin-right: 30px; }
+  .menu_new .nav .tel span.tit {
+    display: none; }
+
+  .index-top .p-category {
+    width: 789px; }
+    .index-top .p-category dl {
+      width: 77%;
+      margin-left: 25px; }
+      .index-top .p-category dl dt {
+        display: none; }
+      .index-top .p-category dl dd {
+        margin-right: 0px; }
+  .index-top .middle {
+    width: 407px;
+    overflow: hidden; }
+    .index-top .middle .banner {
+      width: 407px;
+      overflow: hidden; }
+    .index-top .middle .company {
+      width: 407px;
+      overflow: hidden; }
+
+  .hot-store {
+    height: 290px;
+    width: 1000px; }
+    .hot-store .list ul li {
+      margin-bottom: 18px; }
+
+  .store .fl {
+    width: 630px; }
+  .store .ad {
+    display: none; }
+
+  .brand .fl {
+    width: 630px; }
+  .brand .ad {
+    display: none; }
+
+  .finance .fl {
+    width: 630px; }
+    .finance .fl h2 {
+      width: 630px; }
+    .finance .fl .list ul {
+      width: 627px; }
+      .finance .fl .list ul li {
+        width: 206px; }
+
+  .channel ul {
+    width: 100%; }
+    .channel ul li {
+      width: auto;
+      margin-right: 12px; }
+
+  .foot_new .map .fl dl {
+    width: 110px; }
+
+  .foot_new .so .fl .form input {
+    width: 245px; }
+
+  .bottom .link .fl {
+    text-align: left;
+    padding-bottom: 5px; }
+
+  .finance .fl .list ul li .hover {
+    width: 618px; } }

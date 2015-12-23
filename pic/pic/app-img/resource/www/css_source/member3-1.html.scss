@@ -1,0 +1,29 @@
+@import "member.html.scss";
+.operate{
+	display: inline-block;width:100%;
+	.fl{
+		a{
+			color: $co-f;font-size: 14px;border-radius:20px;margin-right: 10px;display: inline-block;width:100px;height:30px;line-height:30px;text-align: center;
+		}
+	}
+	.fr{
+		span{font-size: 14px;}
+		a{font-size: 14px;margin-right: 15px;}
+	}
+}
+.list{
+	.pro-list{
+		th{
+			text-align: center;
+		}
+		td{
+			text-align: center;padding:0;
+		}
+		label{
+			white-space:nowrap;text-overflow:ellipsis;
+			input{border:#707070 solid 1px;float:left;margin-right: 5px;margin-top: 2px;}
+			span{float:left;display: inline-block;width: 119px;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;}
+		}
+		.td0{text-align: left;padding-left:10px;text-indent: 0;}
+	}
+}

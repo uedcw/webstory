@@ -1,0 +1,3132 @@
+@charset "UTF-8";
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Corrects `block` display not defined in IE6/7/8/9 & FF3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Same with IE9.
+ * Remove excess height in iOS5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+  width: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+[hidden] {
+  display: none; }
+
+/*
+ * Addresses styling not present in IE6/7/8/9.
+ * html5
+ */
+mark {
+  background: #ff0;
+  color: #333333; }
+
+/*
+ * Addresses margin not present in IE6/7/8.
+ * Normalize to chrome 's user agent stylesheet
+ */
+figure {
+  margin: 1em 40px 1em 40px; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Use KISSY CSS default font-size 12px
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 12px;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ * 1. html chrome Simsun, others new times
+ * textarea/button/input/select does not inherit.
+ * ie8- does not allow 'inherit' value.
+ * textarea chrome/fx monospace ie courier new
+ * button/input/select chrome/ie arial firefox Simsun calibri font: 13px/1.25 "Helvetica Neue",Helvetica,Arial;
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma,Arial,sans-serif, \5b8b\4f53, sans-serif;
+  /* 1 */ }
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%; }
+
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ * 1. ie7 10px , others 8px
+ * 2. chrome rgba(0,0,0,0), others transparent
+ * 3. firefox 21px(1.3) others normal(1.13)
+ */
+body {
+  margin: 0;
+  /* 1 */
+  color: #000;
+  background-color: #ffffff;
+  /* 2 */
+  line-height: 1.5;
+  /* 3 */ }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a {
+  color: #317EE7;
+  text-decoration: none;
+  /*
+     * Improves readability when focused and also mouse hovered in all browsers.
+     * people.opera.com/patrickl/experiments/keyboard/test
+     */ }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+a:hover {
+  color: #FB5651; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7.
+ * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to `bolder` in FF3+, ie89, S4/5.
+ *
+ * http://hell.meiert.org/core/css/firefox-3.6.13.css
+ *
+ * chrome default is bold now 19
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * ie8- top =0
+ */
+blockquote {
+  margin: 1em 40px; }
+
+/*
+ * Addresses styling not present in S5
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+p,
+pre {
+  margin: 1em 0; }
+
+/*
+ * 1. Corrects font family set oddly in IE6, S4/5, Chrome.
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ *    ie: courier new others monospace
+ * 2. other browsers other than firefox is not 16px
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  /*ie*/
+  word-wrap: break-word; }
+
+/*
+ * Addresses CSS quotes not supported in IE6/7.
+ */
+q {
+  quotes: none; }
+
+/*
+ * Addresses `quotes` property not supported in S4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+/*
+ * ie8- is wrong with relative
+ */
+small {
+  font-size: 75%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers (except firefox).
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE9-.
+ * margin: auto ??
+ */
+form {
+  margin: 0; }
+
+/*
+ * Define consistent border, margin, and padding.
+ * Same with chrome 's user agent stylesheet
+ */
+fieldset {
+  border: 2px groove #f0f0f0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9.
+ * 2. Corrects text not wrapping in FF3.
+ * 3. Corrects alignment displayed oddly in IE6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  vertical-align: middle; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/*
+ * IE6+ need padding-left/right
+ */
+button {
+  padding: 0px 6px;
+  /* ie6 fix*/
+  _padding: 0; }
+
+/*
+ * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
+ * UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * Removes inner padding and border in FF3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9.
+ * 2. Removes excess padding in IE8/9.
+ * 3. Removes excess padding in IE7.
+ *    Known issue: excess padding remains in IE6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome.
+ *    firefox is content-box (now)
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto; }
+
+html {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+body {
+  _margin: 0;
+  _height: 100%; }
+
+/*IE6 BUG*/
+img {
+  vertical-align: middle; }
+
+textarea {
+  resize: vertical; }
+
+ul, ol, li, dl, dd {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none outside none; }
+
+body {
+  font-family: 'Microsoft YaHei',Arial;
+  font-size: 12px; }
+
+p, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+a {
+  text-decoration: none; }
+
+a:focus {
+  outline: none;
+  -moz-outline: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*form控件公共样式*/
+input[type="text"] {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding-left: 5px;
+  font-family: 'Microsoft YaHei',Arial; }
+
+textarea {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 5px 0px 0px 5px;
+  resize: none;
+  font-family: 'Microsoft YaHei',Arial; }
+
+select {
+  border: 1px solid #ddd;
+  background: #fff;
+  font-family: 'Microsoft YaHei',Arial; }
+
+button {
+  font-family: 'Microsoft YaHei',Arial; }
+
+input {
+  font-family: 'Microsoft YaHei',Arial; }
+
+input[type="text"]:hover {
+  box-shadow: 0 0 5px rgba(15, 128, 227, 0.5); }
+input[type="text"]:focus {
+  box-shadow: 0 0 5px rgba(15, 128, 227, 0.5); }
+
+input[type="text"].error {
+  border: #ff0000 solid 1px; }
+  input[type="text"].error:hover {
+    box-shadow: none; }
+  input[type="text"].error:focus {
+    box-shadow: none; }
+
+input[type="text"].input_readonly:hover {
+  box-shadow: none; }
+input[type="text"].input_readonly:focus {
+  box-shadow: none; }
+
+input[type="text"].input_disabled:hover {
+  box-shadow: none; }
+input[type="text"].input_disabled:focus {
+  box-shadow: none; }
+
+textarea.error {
+  border: #ff0000 solid 1px; }
+
+span.error {
+  border: #febcb7 solid 1px;
+  background: #ffeceb;
+  color: #ff1200;
+  display: block;
+  padding: 0px 5px 0px 5px; }
+
+.btn01 {
+  background: #154179; }
+  .btn01:hover {
+    background: #123868; }
+
+.btn02 {
+  background: #ff6458; }
+  .btn02:hover {
+    background: #ee4f43; }
+
+.btn03 {
+  background: #99cc00; }
+  .btn03:hover {
+    background: #91c002; }
+
+.btn04 {
+  background: #317ee7; }
+  .btn04:hover {
+    background: #2c6dc6; }
+
+.btn05 {
+  background: #ff771c; }
+  .btn05:hover {
+    background: #e66c1a; }
+
+.btn06 {
+  border: #ddd solid 1px; }
+  .btn06:hover {
+    border: #ccc solid 1px; }
+
+.btn07 {
+  background: #e3e0df;
+  color: #fff; }
+
+.w100 {
+  width: 100px; }
+
+.w180 {
+  width: 180px; }
+
+.w280 {
+  width: 280px; }
+
+.w480 {
+  width: 480px; }
+
+.mt2 {
+  margin-top: 2px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt15 {
+  margin-top: 15px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt25 {
+  margin-top: 25px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mb5 {
+  margin-bottom: 5px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mb15 {
+  margin-bottom: 15px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mb25 {
+  margin-bottom: 25px; }
+
+.mb30 {
+  margin-bottom: 30px; }
+
+.ml5 {
+  margin-left: 5px; }
+
+.ml10 {
+  margin-left: 10px; }
+
+.ml15 {
+  margin-left: 15px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.ml25 {
+  margin-left: 25px; }
+
+.ml30 {
+  margin-left: 30px; }
+
+.mr5 {
+  margin-right: 5px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.mr15 {
+  margin-right: 15px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.mr25 {
+  margin-right: 25px; }
+
+.mr30 {
+  margin-right: 30px; }
+
+.txt-c {
+  text-align: center; }
+
+.txt-l {
+  text-align: left; }
+
+.txt-r {
+  text-align: right; }
+
+.login {
+  background: #fff;
+  width: 360px;
+  position: relative;
+  margin-top: -30px;
+  z-index: 1; }
+  .login .error {
+    color: #fe695f;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 127px; }
+  .login h2 {
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    background: #fff;
+    margin-left: -21px;
+    width: 402px; }
+    .login h2 img {
+      margin-bottom: 3px; }
+  .login ul {
+    width: 90%;
+    margin: 20px auto;
+    display: block; }
+    .login ul li {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      border-bottom: #ddd solid 1px;
+      position: relative;
+      float: left;
+      padding: 5px 0px; }
+      .login ul li input {
+        border: 0;
+        background: none;
+        float: left;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        padding-left: 0;
+        position: relative;
+        z-index: 2; }
+        .login ul li input.i-code {
+          width: 60%; }
+        .login ul li input:hover {
+          box-shadow: none; }
+        .login ul li input:focus {
+          box-shadow: none; }
+      .login ul li .code {
+        float: right;
+        display: block; }
+      .login ul li .btn01 {
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        color: #fff;
+        height: 55px;
+        line-height: 55px;
+        width: 100%;
+        border: 0;
+        margin-top: 12px; }
+      .login ul li.title {
+        font-size: 24px;
+        color: #000; }
+      .login ul li.error {
+        font-size: 14px;
+        color: #fe695f; }
+      .login ul li.li0 {
+        border: 0; }
+
+.contact_new {
+  border: #ddd solid 1px;
+  margin-top: 15px;
+  width: 89%;
+  padding: 4%  5%  1%  5%;
+  background: url("../../../images/contact.png") repeat-x right 0; }
+  .contact_new h2 {
+    color: #174c73;
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .contact_new p {
+    font-size: 12px;
+    color: #555;
+    width: 65%; }
+  .contact_new .bm {
+    margin-top: 18px; }
+    .contact_new .bm p {
+      height: 20px;
+      line-height: 17px;
+      padding-left: 22px;
+      background: url("../../../images/c-z-sys-ico.png");
+      color: #666; }
+      .contact_new .bm p.tel {
+        background-position: 0 -109px; }
+      .contact_new .bm p.mail {
+        background-position: 0 -130px; }
+        .contact_new .bm p.mail a {
+          color: #666; }
+
+.contact_new_en {
+  border: #ddd solid 1px;
+  margin-top: 15px;
+  width: 89%;
+  padding: 4%  5%  1%  5%;
+  background: url("../../../images/contact-en.png") right bottom; }
+  .contact_new_en h2 {
+    color: #174c73;
+    font-size: 20px;
+    margin-bottom: 0px; }
+  .contact_new_en p {
+    font-size: 12px;
+    color: #777;
+    width: 80%; }
+  .contact_new_en .bm {
+    margin-top: 15px; }
+    .contact_new_en .bm p {
+      height: 25px;
+      line-height: 25px;
+      padding-left: 28px;
+      background: url("../../../images/c-z-sys-ico.png");
+      color: #666; }
+      .contact_new_en .bm p.tel {
+        background-position: 0 -174px; }
+      .contact_new_en .bm p.mail {
+        background-position: 0 -205px; }
+        .contact_new_en .bm p.mail a {
+          color: #666; }
+
+.head_new {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100%;
+  background: #f0f0f0;
+  height: 35px;
+  line-height: 35px;
+  position: relative;
+  z-index: 9; }
+  .head_new a {
+    color: #555;
+    font-size: 12px; }
+    .head_new a:hover {
+      color: #317ee7; }
+    .head_new a.quick_inqury {
+      font-size: 14px;
+      color: #FB5651;
+      margin-right: 15px; }
+      .head_new a.quick_inqury:hover {
+        color: #FB5651; }
+  .head_new .exit {
+    display: none; }
+  .head_new .user_name {
+    display: none; }
+  .head_new .fl dl {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+    .head_new .fl dl dt {
+      float: left; }
+      .head_new .fl dl dt a {
+        color: #333; }
+        .head_new .fl dl dt a:hover {
+          color: #317ee7; }
+    .head_new .fl dl dd {
+      float: left;
+      margin-left: 25px; }
+      .head_new .fl dl dd span {
+        color: #555;
+        margin-right: 5px; }
+      .head_new .fl dl dd .vistor {
+        display: none; }
+      .head_new .fl dl dd a.exit {
+        color: #317ee7;
+        margin-left: 10px; }
+        .head_new .fl dl dd a.exit:hover {
+          color: #FF771C; }
+      .head_new .fl dl dd.no-login {
+        display: none; }
+        .head_new .fl dl dd.no-login a {
+          color: #317ee7;
+          margin-right: 10px; }
+          .head_new .fl dl dd.no-login a:hover {
+            color: #FF771C; }
+      .head_new .fl dl dd.ml10 {
+        margin-left: 10px; }
+    .head_new .fl dl .message {
+      position: relative;
+      margin-top: 5px;
+      height: 25px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: auto;
+      display: none; }
+      .head_new .fl dl .message i {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url("../../../images/ico-index-2015.png") -56px 0;
+        z-index: 9;
+        float: left;
+        margin-top: 6px;
+        margin-right: 3px; }
+        .head_new .fl dl .message i.arrow {
+          background-position: 0px -24px;
+          z-index: 10;
+          margin-top: 6px;
+          margin-left: 3px; }
+      .head_new .fl dl .message em {
+        color: #fb5651; }
+      .head_new .fl dl .message .default {
+        position: relative;
+        z-index: 8;
+        padding: 1px 1px 0px 10px;
+        width: auto;
+        height: 30px;
+        line-height: 25px; }
+        .head_new .fl dl .message .default span {
+          margin-right: 2px;
+          float: left; }
+        .head_new .fl dl .message .default em {
+          float: left; }
+        .head_new .fl dl .message .default a:hover span {
+          color: #317ee7; }
+      .head_new .fl dl .message .hover {
+        display: none;
+        background: #fff;
+        border: #ddd solid 1px;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        line-height: 25px;
+        width: 125px;
+        padding: 8px 0px;
+        z-index: 7; }
+        .head_new .fl dl .message .hover ul {
+          margin-left: 15px; }
+    .head_new .fl dl .no-message {
+      position: relative;
+      margin-top: 5px;
+      height: 25px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: auto;
+      display: none; }
+      .head_new .fl dl .no-message i {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url("../../../images/ico-index-2015.png") -28px 0;
+        z-index: 9;
+        float: left;
+        margin-top: 6px;
+        margin-right: 3px; }
+        .head_new .fl dl .no-message i.arrow {
+          background-position: 0px -24px;
+          z-index: 10;
+          margin-top: 6px;
+          margin-left: 3px; }
+      .head_new .fl dl .no-message em {
+        color: #fb5651; }
+      .head_new .fl dl .no-message .default {
+        position: relative;
+        z-index: 8;
+        padding: 1px 1px 0px 10px;
+        width: auto;
+        height: 30px;
+        line-height: 25px; }
+        .head_new .fl dl .no-message .default span {
+          margin-right: 2px;
+          float: left; }
+        .head_new .fl dl .no-message .default em {
+          float: left; }
+        .head_new .fl dl .no-message .default a:hover span {
+          color: #317ee7; }
+      .head_new .fl dl .no-message .hover {
+        display: none;
+        background: #fff;
+        border: #ddd solid 1px;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        line-height: 25px;
+        width: 125px;
+        padding: 8px 0px;
+        z-index: 7; }
+        .head_new .fl dl .no-message .hover p {
+          color: #555;
+          width: 100%;
+          text-align: center;
+          padding: 20px 0px; }
+  .head_new .fr dl {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+    .head_new .fr dl dt {
+      float: left;
+      margin-left: 7px; }
+      .head_new .fr dl dt a {
+        padding-left: 26px;
+        display: block;
+        position: relative;
+        height: 15px; }
+        .head_new .fr dl dt a i {
+          display: block;
+          width: 25px;
+          height: 15px;
+          background: url("../../../images/ico-index-2015.png") -88px 0;
+          position: absolute;
+          left: 0;
+          top: 10px; }
+    .head_new .fr dl dd {
+      float: left;
+      position: relative;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1; }
+      .head_new .fr dl dd .default {
+        position: relative;
+        z-index: 8;
+        padding: 1px 10px 1px 10px;
+        width: auto;
+        height: 28px;
+        line-height: 23px;
+        margin-top: 5px; }
+        .head_new .fr dl dd .default span {
+          margin-right: 2px;
+          float: left; }
+        .head_new .fr dl dd .default i {
+          display: block;
+          width: 15px;
+          height: 15px;
+          background: url("../../../images/ico-index-2015.png") 0 -25px;
+          float: left;
+          margin-top: 6px;
+          margin-left: 2px; }
+      .head_new .fr dl dd i.line {
+        float: left;
+        display: block;
+        width: 2px;
+        height: 14px;
+        border-right: #ccc solid 1px;
+        position: absolute;
+        right: 2px;
+        top: 11px; }
+      .head_new .fr dl dd .hover {
+        display: none;
+        background: #fff;
+        border: #ddd solid 1px;
+        position: absolute;
+        top: 33px;
+        line-height: 28px;
+        padding-top: 6px;
+        padding-bottom: 8px;
+        z-index: 7; }
+        .head_new .fr dl dd .hover ul {
+          text-indent: 13px; }
+          .head_new .fr dl dd .hover ul.member {
+            width: 95px; }
+          .head_new .fr dl dd .hover ul.service {
+            width: 95px; }
+          .head_new .fr dl dd .hover ul.category {
+            width: 230px;
+            margin-top: 5px; }
+            .head_new .fr dl dd .hover ul.category li {
+              float: left;
+              margin-right: 20px; }
+          .head_new .fr dl dd .hover ul.navigation {
+            float: left;
+            border-right: #ddd solid 1px;
+            text-indent: 25px;
+            height: 145px;
+            margin: 8px 0px; }
+            .head_new .fr dl dd .hover ul.navigation li {
+              float: left;
+              margin-right: 10px; }
+              .head_new .fr dl dd .hover ul.navigation li a.pink {
+                color: #fb5651; }
+              .head_new .fr dl dd .hover ul.navigation li.tit {
+                font-size: 16px;
+                color: #333;
+                font-weight: bold;
+                width: 100%;
+                margin-bottom: 5px; }
+                .head_new .fr dl dd .hover ul.navigation li.tit.blue {
+                  color: #317ee7; }
+              .head_new .fr dl dd .hover ul.navigation li.w100 {
+                width: 100%; }
+          .head_new .fr dl dd .hover ul.b0 {
+            border: 0; }
+          .head_new .fr dl dd .hover ul.w210 {
+            width: 210px; }
+          .head_new .fr dl dd .hover ul.w150 {
+            width: 150px; }
+            .head_new .fr dl dd .hover ul.w150 li {
+              width: 100%; }
+          .head_new .fr dl dd .hover ul.w140 {
+            width: 140px; }
+            .head_new .fr dl dd .hover ul.w140 li {
+              width: 100%; }
+          .head_new .fr dl dd .hover ul.w230 {
+            width: 230px; }
+      .head_new .fr dl dd .psr {
+        right: 0;
+        width: 740px; }
+      .head_new .fr dl dd:hover .default {
+        border: #ddd solid 1px;
+        padding: 0px 9px 0px 9px;
+        border-bottom: 0;
+        background-color: #fff; }
+      .head_new .fr dl dd:hover .hover {
+        display: block; }
+
+.search_new {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100%; }
+  .search_new .logo {
+    float: left;
+    display: block;
+    width: 200px;
+    height: 75px;
+    background: url("../../../images/ico-index-2015.png") 0 -430px;
+    margin-top: 20px; }
+  .search_new .search {
+    float: left;
+    margin-left: 130px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 720px;
+    margin-top: 20px; }
+    .search_new .search .tab {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%;
+      float: left; }
+      .search_new .search .tab li {
+        float: left;
+        cursor: pointer;
+        background: #f0f0f0;
+        color: #555;
+        margin-right: 2px;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 18px; }
+        .search_new .search .tab li.cur {
+          color: #fff;
+          background: #317ee7; }
+        .search_new .search .tab li:hover {
+          color: #fff;
+          background: #317ee7; }
+    .search_new .search .so {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left; }
+      .search_new .search .so input[type="text"] {
+        float: left;
+        border: 0;
+        background: #fff;
+        width: 540px;
+        height: 30px;
+        line-height: 30px;
+        border: #317ee7 solid 2px;
+        border-right: 0; }
+      .search_new .search .so .btn04 {
+        width: 92px;
+        text-align: center;
+        display: block;
+        height: 36px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 16px;
+        border: 0;
+        float: left; }
+      .search_new .search .so .link {
+        float: left;
+        margin-left: 20px;
+        color: #317ee7; }
+        .search_new .search .so .link:hover {
+          color: #FF771C; }
+    .search_new .search .link {
+      float: left;
+      margin-left: 20px; }
+    .search_new .search .keyword {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+      width: 640px;
+      margin-top: 8px; }
+      .search_new .search .keyword a {
+        float: left;
+        color: #777;
+        margin-right: 8px; }
+        .search_new .search .keyword a:hover {
+          color: #317ee7; }
+        .search_new .search .keyword a.more {
+          display: block;
+          float: right;
+          border: #ddd solid 1px;
+          width: 35px;
+          height: 15px;
+          line-height: 15px;
+          text-align: center;
+          margin-right: 0px; }
+
+.search_new_supply {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100%; }
+  .search_new_supply .logo {
+    float: left;
+    display: block;
+    width: 200px;
+    height: 75px;
+    background: url("../../../images/ico-index-2015.png") 0 -430px;
+    margin-top: 20px; }
+  .search_new_supply .search {
+    float: right;
+    margin-left: 0px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-top: 20px; }
+    .search_new_supply .search .link {
+      float: left;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-right: 50px;
+      margin-top: 22px; }
+      .search_new_supply .search .link a {
+        display: block;
+        padding: 6px 20px;
+        border: #bcbcbc solid 1px;
+        color: #333;
+        float: left;
+        margin-right: 10px;
+        font-size: 14px;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+        background-size: 100%;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+        background-image: -moz-linear-gradient(#ffffff, #eeeeee);
+        background-image: -webkit-linear-gradient(#ffffff, #eeeeee);
+        background-image: linear-gradient(#ffffff, #eeeeee); }
+        .search_new_supply .search .link a:hover {
+          padding: 7px 21px;
+          background: #317EE7;
+          color: #fff;
+          border: 0; }
+    .search_new_supply .search .so {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+      margin-top: 22px; }
+      .search_new_supply .search .so input[type="text"] {
+        float: left;
+        border: 0;
+        background: #fff;
+        width: 450px;
+        height: 30px;
+        line-height: 30px;
+        border: #317ee7 solid 2px;
+        border-right: 0; }
+      .search_new_supply .search .so .btn04 {
+        margin-right: 10px;
+        width: 92px;
+        text-align: center;
+        display: block;
+        height: 36px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 16px;
+        border: 0;
+        float: left; }
+      .search_new_supply .search .so .mr0 {
+        margin-right: 0px; }
+
+.menu_new {
+  width: 100%;
+  border-bottom: #317ee7 solid 3px;
+  margin-top: 30px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  z-index: 3; }
+  .menu_new .nav {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    float: left; }
+    .menu_new .nav .spec {
+      float: left;
+      width: 210px;
+      height: 40px; }
+      .menu_new .nav .spec h2 {
+        line-height: 40px;
+        background: #317ee7;
+        text-indent: 15px;
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold; }
+      .menu_new .nav .spec .drop-memu {
+        border: #317ee7 solid 2px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        padding-top: 5px; }
+        .menu_new .nav .spec .drop-memu dl {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          float: left;
+          width: 176px;
+          padding: 12px 15px;
+          border-bottom: dotted 1px #ddd; }
+          .menu_new .nav .spec .drop-memu dl dt {
+            width: 100%;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            margin-bottom: 7px;
+            float: left; }
+            .menu_new .nav .spec .drop-memu dl dt span {
+              font-size: 14px;
+              color: #3c3c3c;
+              font-weight: bold;
+              float: left; }
+            .menu_new .nav .spec .drop-memu dl dt a {
+              float: right;
+              display: block;
+              border: #ddd solid 1px;
+              width: 35px;
+              height: 15px;
+              line-height: 15px;
+              text-align: center;
+              color: #777;
+              margin-top: 3px; }
+              .menu_new .nav .spec .drop-memu dl dt a:hover {
+                color: #317ee7; }
+          .menu_new .nav .spec .drop-memu dl dd {
+            width: 115%;
+            float: left; }
+            .menu_new .nav .spec .drop-memu dl dd a {
+              color: #3c3c3c;
+              margin-right: 23px;
+              margin-bottom: 5px;
+              display: block;
+              float: left; }
+              .menu_new .nav .spec .drop-memu dl dd a:hover {
+                color: #317ee7; }
+          .menu_new .nav .spec .drop-memu dl.bd0 {
+            border: 0; }
+          .ie7 .menu_new .nav .spec .drop-memu dl {
+            padding: 15px 15px; }
+    .menu_new .nav ul.link {
+      float: left;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-left: 25px; }
+      .menu_new .nav ul.link li {
+        float: left;
+        margin-right: 40px;
+        height: 40px;
+        line-height: 37px; }
+        .menu_new .nav ul.link li a {
+          color: #333;
+          font-size: 16px; }
+          .menu_new .nav ul.link li a.cur {
+            color: #317ee7; }
+            .menu_new .nav ul.link li a.cur:hover {
+              color: #FF771C; }
+          .menu_new .nav ul.link li a:hover {
+            color: #2c6dc6; }
+    .menu_new .nav .tel {
+      float: right;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-top: 3px; }
+      .menu_new .nav .tel i {
+        display: inline-block;
+        width: 26px;
+        height: 25px;
+        background: url("../../../images/ico-index-2015.png") -212px 6px;
+        float: left; }
+      .menu_new .nav .tel span {
+        display: inline-block;
+        color: #333;
+        font-size: 14px;
+        float: left;
+        margin-top: 5px; }
+        .menu_new .nav .tel span.num {
+          font-size: 20px;
+          margin-top: 0; }
+        .menu_new .nav .tel span.time {
+          color: #999;
+          margin-left: 3px; }
+
+.menu_new_sec {
+  width: 100%;
+  border-bottom: #317ee7 solid 3px;
+  margin-top: 30px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  z-index: 3; }
+  .menu_new_sec .nav {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    float: left; }
+    .menu_new_sec .nav .spec {
+      float: left;
+      width: 210px;
+      height: 40px; }
+      .menu_new_sec .nav .spec h2 {
+        line-height: 40px;
+        background: #317ee7;
+        text-indent: 15px;
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+        position: relative;
+        height: 40px; }
+        .menu_new_sec .nav .spec h2 i {
+          display: block;
+          background: url("../../images/detail_ico_2015.png") -300px 6px;
+          width: 42px;
+          height: 40px;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          z-index: 9999; }
+      .menu_new_sec .nav .spec .drop-memu {
+        border: #317ee7 solid 2px;
+        padding-top: 5px;
+        background: #fff;
+        display: none; }
+        .menu_new_sec .nav .spec .drop-memu dl {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          float: left;
+          width: 176px;
+          padding: 12px 15px;
+          border-bottom: dotted 1px #ddd; }
+          .menu_new_sec .nav .spec .drop-memu dl dt {
+            width: 100%;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            margin-bottom: 7px;
+            float: left; }
+            .menu_new_sec .nav .spec .drop-memu dl dt span {
+              font-size: 14px;
+              color: #3c3c3c;
+              font-weight: bold;
+              float: left; }
+            .menu_new_sec .nav .spec .drop-memu dl dt a {
+              float: right;
+              display: block;
+              border: #ddd solid 1px;
+              width: 35px;
+              height: 15px;
+              line-height: 15px;
+              text-align: center;
+              color: #777;
+              margin-top: 3px; }
+              .menu_new_sec .nav .spec .drop-memu dl dt a:hover {
+                color: #317ee7; }
+          .menu_new_sec .nav .spec .drop-memu dl dd {
+            width: 115%;
+            float: left; }
+            .menu_new_sec .nav .spec .drop-memu dl dd a {
+              color: #3c3c3c;
+              margin-right: 23px;
+              margin-bottom: 5px;
+              display: block;
+              float: left; }
+              .menu_new_sec .nav .spec .drop-memu dl dd a:hover {
+                color: #317ee7; }
+          .menu_new_sec .nav .spec .drop-memu dl.bd0 {
+            border: 0; }
+          .ie7 .menu_new_sec .nav .spec .drop-memu dl {
+            padding: 15px 15px; }
+      .menu_new_sec .nav .spec:hover .drop-memu {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1; }
+    .menu_new_sec .nav ul.link {
+      float: left;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-left: 25px; }
+      .menu_new_sec .nav ul.link li {
+        float: left;
+        margin-right: 40px;
+        height: 40px;
+        line-height: 37px; }
+        .menu_new_sec .nav ul.link li a {
+          color: #333;
+          font-size: 16px; }
+          .menu_new_sec .nav ul.link li a.cur {
+            color: #317ee7; }
+            .menu_new_sec .nav ul.link li a.cur:hover {
+              color: #FF771C; }
+          .menu_new_sec .nav ul.link li a:hover {
+            color: #2c6dc6; }
+    .menu_new_sec .nav .tel {
+      float: right;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-top: 3px; }
+      .menu_new_sec .nav .tel i {
+        display: inline-block;
+        width: 26px;
+        height: 25px;
+        background: url("../../../images/ico-index-2015.png") -212px 6px;
+        float: left; }
+      .menu_new_sec .nav .tel span {
+        display: inline-block;
+        color: #333;
+        font-size: 14px;
+        float: left;
+        margin-top: 5px; }
+        .menu_new_sec .nav .tel span.num {
+          font-size: 20px;
+          margin-top: 0; }
+        .menu_new_sec .nav .tel span.time {
+          color: #999;
+          margin-left: 3px; }
+
+.foot_new {
+  display: inline-block;
+  width: 100%;
+  background: #fafafa;
+  border-top: #ddd solid 1px;
+  border-bottom: #ddd solid 1px;
+  margin-top: 20px;
+  padding-top: 30px; }
+  .foot_new .map {
+    width: 100%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+    .foot_new .map .fl dl {
+      float: left;
+      width: 150px; }
+      .foot_new .map .fl dl dt {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px; }
+      .foot_new .map .fl dl dd {
+        margin-bottom: 10px; }
+        .foot_new .map .fl dl dd a {
+          color: #777; }
+          .foot_new .map .fl dl dd a:hover {
+            color: #0f80e3; }
+      .foot_new .map .fl dl.last {
+        width: 100px; }
+    .foot_new .map .fr {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      border-left: #ddd solid 1px;
+      padding-left: 40px; }
+      .foot_new .map .fr .ps {
+        float: left; }
+        .foot_new .map .fr .ps h2 {
+          font-weight: bold;
+          font-size: 14px;
+          color: #333;
+          margin-bottom: 10px; }
+        .foot_new .map .fr .ps p {
+          color: #555;
+          line-height: 24px; }
+      .foot_new .map .fr .code {
+        float: left;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        position: relative;
+        padding-top: 20px; }
+        .foot_new .map .fr .code i {
+          display: block;
+          width: 111px;
+          height: 15px;
+          background: url("../../../images/ico-index-2015.png") -386px -30px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 0; }
+        .foot_new .map .fr .code p {
+          float: left;
+          width: 100px;
+          text-align: center;
+          color: #555;
+          margin-top: 15px;
+          margin-left: 20px; }
+  .foot_new .so {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: #ddd solid 1px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%; }
+    .foot_new .so .fl .logo {
+      float: left;
+      display: block;
+      width: 300px;
+      height: 75px;
+      background: url("../../../images/ico-index-2015.png") 0px -547px;
+      margin-top: 20px; }
+    .foot_new .so .fl .form {
+      float: left;
+      margin-top: 30px;
+      margin-left: 40px; }
+      .foot_new .so .fl .form input {
+        float: left;
+        background: #FFF;
+        width: 420px;
+        height: 30px;
+        line-height: 30px;
+        border: #ddd solid 1px;
+        border-right: 0; }
+      .foot_new .so .fl .form .btn {
+        width: 80px;
+        text-align: center;
+        display: block;
+        height: 34px;
+        line-height: 26px;
+        color: #fff;
+        font-size: 14px;
+        float: left;
+        background: #317EE7;
+        border: #317EE7 solid 1px; }
+        .foot_new .so .fl .form .btn:hover {
+          background: #2C6DC6; }
+    .foot_new .so .fr h2 {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+      margin-top: 7px;
+      text-align: right; }
+      .foot_new .so .fr h2 em {
+        font-size: 20px;
+        color: #ff771c; }
+    .foot_new .so .fr h3 {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%; }
+      .foot_new .so .fr h3 .click {
+        display: block;
+        width: 111px;
+        height: 20px;
+        background: url("../../../images/ico-index-2015.png") -397px -3px no-repeat;
+        float: right;
+        font-size: 0;
+        margin-top: 8px; }
+      .foot_new .so .fr h3 .btn05 {
+        width: 120px;
+        text-align: center;
+        display: block;
+        height: 32px;
+        line-height: 32px;
+        color: #fff;
+        font-size: 14px;
+        float: right; }
+
+.bottom {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .bottom .nav a {
+    color: #777;
+    padding: 0 15px;
+    height: 15px;
+    line-height: 15px;
+    border-right: #b7b7b7 solid 1px; }
+    .bottom .nav a:hover {
+      color: #0f80e3; }
+    .bottom .nav a.bd0 {
+      border: 0; }
+  .bottom .nav .hot-cpd {
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer; }
+    .bottom .nav .hot-cpd span {
+      margin-right: 2px;
+      float: left;
+      margin-left: 8px;
+      color: #777; }
+    .bottom .nav .hot-cpd i {
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: transparent url("../../../images/ico-index-2015.png") repeat scroll 0px -25px;
+      float: left;
+      margin-top: 6px;
+      margin-left: 2px; }
+  .bottom .nav .seo-enter {
+    position: relative;
+    border: #ddd solid 1px;
+    margin-top: -9px; }
+    .bottom .nav .seo-enter .foot-seo {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%;
+      position: absolute;
+      top: 25px;
+      right: -1px;
+      z-index: 99;
+      width: 1156px;
+      background: white none repeat scroll 0% 0%;
+      border: 1px solid #dddddd;
+      padding: 20px;
+      display: none; }
+      .bottom .nav .seo-enter .foot-seo dl {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px; }
+        .bottom .nav .seo-enter .foot-seo dl dt {
+          float: left;
+          width: 90px;
+          font-size: 12px;
+          color: #333; }
+        .bottom .nav .seo-enter .foot-seo dl dd {
+          float: left;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          width: 90%; }
+          .bottom .nav .seo-enter .foot-seo dl dd a {
+            color: #777;
+            margin-left: 15px;
+            margin-bottom: 5px;
+            float: left;
+            padding: 0;
+            border: 0;
+            font-size: 12px; }
+    .bottom .nav .seo-enter:hover .foot-seo {
+      display: block; }
+  .bottom p {
+    width: 100%;
+    color: #777;
+    margin-top: 10px; }
+  .bottom .link {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dotted #ddd;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 10px; }
+    .bottom .link .fl {
+      color: #999;
+      width: 100px;
+      text-align: right; }
+    .bottom .link a {
+      color: #999;
+      height: 20px;
+      line-height: 20px;
+      margin-right: 40px;
+      float: left; }
+      .bottom .link a:hover {
+        color: #0f80e3; }
+    .bottom .link .list {
+      margin-left: 10px;
+      float: left; }
+
+.fix_nav {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  margin-top: -160px;
+  z-index: 999; }
+  .fix_nav ul li {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px; }
+    .fix_nav ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: #ddd solid 1px;
+      color: #aaa;
+      background: #fff; }
+      .fix_nav ul li a i {
+        width: 25px;
+        height: 25px;
+        display: block;
+        background: url("../../../images/ico-index-2015.png");
+        margin: 8px auto;
+        margin-bottom: 5px; }
+        .fix_nav ul li a i.i1 {
+          background-position: -196px -80px; }
+        .fix_nav ul li a i.i2 {
+          background-position: -198px -144px; }
+        .fix_nav ul li a i.i3 {
+          background-position: -196px -211px; }
+        .fix_nav ul li a i.i4 {
+          background-position: -196px -276px; }
+        .fix_nav ul li a i.i5 {
+          background-position: -196px -339px; }
+      .fix_nav ul li a:hover {
+        color: #fff;
+        background: #488fef;
+        border: #488fef solid 1px; }
+        .fix_nav ul li a:hover i.i1 {
+          background-position: -141px -80px; }
+        .fix_nav ul li a:hover i.i2 {
+          background-position: -143px -144px; }
+        .fix_nav ul li a:hover i.i3 {
+          background-position: -141px -211px; }
+        .fix_nav ul li a:hover i.i4 {
+          background-position: -141px -276px; }
+        .fix_nav ul li a:hover i.i5 {
+          background-position: -141px -339px; }
+      .fix_nav ul li a.cur {
+        color: #fff;
+        background: #488fef;
+        border: #488fef solid 1px; }
+        .fix_nav ul li a.cur i.i1 {
+          background-position: -141px -80px; }
+        .fix_nav ul li a.cur i.i2 {
+          background-position: -142px -144px; }
+        .fix_nav ul li a.cur i.i3 {
+          background-position: -141px -211px; }
+        .fix_nav ul li a.cur i.i4 {
+          background-position: -141px -276px; }
+        .fix_nav ul li a.cur i.i5 {
+          background-position: -141px -339px; }
+    .fix_nav ul li.top {
+      display: none; }
+
+/*当前位置*/
+.pub_location {
+  line-height: 40px;
+  display: inline-block;
+  width: 100%;
+  color: #888; }
+  .pub_location a {
+    color: #888; }
+  .pub_location em {
+    margin: 0 5px; }
+  .pub_location .pub_action {
+    float: left; }
+    .pub_location .pub_action a {
+      color: #888; }
+      .pub_location .pub_action a:hover {
+        color: #317ee7; }
+      .pub_location .pub_action a.catalog {
+        border: #dddddd solid 1px;
+        padding: 3px 10px;
+        margin-left: 5px; }
+        .pub_location .pub_action a.catalog:hover {
+          color: #fff;
+          background: #0f80e3;
+          border: 0;
+          padding: 4px 11px; }
+      .pub_location .pub_action a.cancel {
+        border: #dddddd solid 1px;
+        padding: 3px 10px;
+        margin-left: 8px; }
+        .pub_location .pub_action a.cancel i {
+          margin-left: 8px;
+          font-size: 14px;
+          font-family: Arial; }
+        .pub_location .pub_action a.cancel:hover {
+          color: #317ee7;
+          border: #317ee7 solid 1px; }
+    .pub_location .pub_action em {
+      color: #888;
+      margin: 0 5px; }
+    .pub_location .pub_action span {
+      color: #888;
+      margin-right: 5px; }
+  .pub_location .bshare-custom {
+    float: right;
+    margin: 10px 0; }
+
+/*分页*/
+.m-page {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 40px; }
+  .m-page a {
+    color: #555;
+    border: #dddddd solid 1px;
+    padding: 5px 10px 6px 10px;
+    margin-right: 5px;
+    border-radius: 1px;
+    display: inline-block;
+    background: #fff; }
+    .m-page a.cur {
+      background: #0f80e3;
+      color: #fff;
+      border: 0;
+      padding: 6px 11px 7px 11px; }
+    .m-page a:hover {
+      background: #0f80e3;
+      color: #fff;
+      border: 0;
+      padding: 6px 11px 7px 11px; }
+    .m-page a.disable:hover {
+      color: #555;
+      background: #fff;
+      border: #dddddd solid 1px;
+      padding: 5px 10px 6px 10px; }
+
+.m-page-new {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 40px; }
+  .m-page-new .pagination li {
+    display: inline-block; }
+    .m-page-new .pagination li span {
+      color: #555;
+      border: #dddddd solid 1px;
+      padding: 5px 10px 6px 10px;
+      margin-right: 5px;
+      border-radius: 1px;
+      display: inline-block;
+      background: #fff; }
+      .m-page-new .pagination li span.cur {
+        background: #0f80e3;
+        color: #fff;
+        border: 0;
+        padding: 6px 11px 7px 11px; }
+      .m-page-new .pagination li span.disable:hover {
+        color: #555;
+        background: #fff;
+        border: #dddddd solid 1px;
+        padding: 5px 10px 6px 10px; }
+    .m-page-new .pagination li a {
+      color: #555;
+      border: #dddddd solid 1px;
+      padding: 5px 10px 6px 10px;
+      margin-right: 5px;
+      border-radius: 1px;
+      display: inline-block;
+      background: #fff; }
+      .m-page-new .pagination li a.cur {
+        background: #0f80e3;
+        color: #fff;
+        border: 0;
+        padding: 6px 11px 7px 11px; }
+      .m-page-new .pagination li a:hover {
+        background: #0f80e3;
+        color: #fff;
+        border: 0;
+        padding: 6px 11px 7px 11px; }
+      .m-page-new .pagination li a.disable:hover {
+        color: #555;
+        background: #fff;
+        border: #dddddd solid 1px;
+        padding: 5px 10px 6px 10px; }
+    .m-page-new .pagination li.active span {
+      background: #0f80e3;
+      color: #fff;
+      border: 0;
+      padding: 6px 11px 7px 11px; }
+      .m-page-new .pagination li.active span.disable:hover {
+        color: #555;
+        background: #fff;
+        border: #dddddd solid 1px;
+        padding: 5px 10px 6px 10px; }
+
+.t_page {
+  width: 100%; }
+  .t_page .p_top {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%; }
+    .t_page .p_top .sort {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 40%;
+      float: left; }
+      .t_page .p_top .sort a {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        color: #555;
+        margin-right: 25px;
+        font-size: 14px;
+        float: left;
+        margin-top: 5px; }
+        .t_page .p_top .sort a em {
+          float: left; }
+        .t_page .p_top .sort a i {
+          float: left;
+          display: block;
+          background: url("../../images/detail_ico_2015.png") -188px -25px;
+          width: 10px;
+          height: 12px;
+          margin-top: 6px; }
+        .t_page .p_top .sort a.cur i {
+          background-position: -188px -1px; }
+        .t_page .p_top .sort a:hover {
+          color: #0f80e3; }
+    .t_page .p_top .num {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 40%;
+      text-align: right;
+      float: right; }
+      .t_page .p_top .num span {
+        color: #555;
+        font-size: 14px;
+        padding: 2px 0px;
+        margin-right: -5px; }
+      .t_page .p_top .num a {
+        color: #555;
+        border: #dddddd solid 1px;
+        padding: 2px 5px;
+        margin-left: 5px;
+        border-radius: 1px;
+        display: inline-block;
+        background: #f8f8f8;
+        font-size: 14px; }
+        .t_page .p_top .num a.cur {
+          background: #0f80e3;
+          color: #fff;
+          border: 0;
+          padding: 3px 6px; }
+        .t_page .p_top .num a:hover {
+          background: #0f80e3;
+          color: #fff;
+          border: 0;
+          padding: 3px 6px; }
+  .t_page .p_bottom {
+    background: #f7f7f7;
+    border-top: #0f80e3 solid 2px;
+    margin-top: 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    padding: 5px 0px; }
+    .t_page .p_bottom .total {
+      width: 40%;
+      margin-top: 5px;
+      margin-left: 10px; }
+      .t_page .p_bottom .total span {
+        color: #777; }
+        .t_page .p_bottom .total span em {
+          margin: 0 3px;
+          color: #ff6600; }
+    .t_page .p_bottom .page_num a {
+      float: left; }
+      .t_page .p_bottom .page_num a.pre {
+        color: #317ee7;
+        font-size: 20px; }
+      .t_page .p_bottom .page_num a.disable {
+        color: #dedede;
+        cursor: auto; }
+      .t_page .p_bottom .page_num a.next {
+        color: #317ee7;
+        font-size: 20px;
+        margin-right: 10px; }
+    .t_page .p_bottom .page_num .go {
+      font-size: 12px;
+      display: inline-block;
+      height: 20px;
+      line-height: 20px;
+      width: 40px;
+      text-align: center;
+      background: #0F80E3;
+      color: #FFF;
+      margin: 5px -2px 0px -2px;
+      border: 0; }
+      .t_page .p_bottom .page_num .go:hover {
+        background: #2C6DC6; }
+    .t_page .p_bottom .page_num input {
+      width: 40px;
+      margin: 0 5px;
+      float: left;
+      margin-top: 5px;
+      margin-left: -5px;
+      margin-right: -5px;
+      text-align: center;
+      color: #777;
+      border: #317ee7 solid 1px; }
+      .t_page .p_bottom .page_num input:focus {
+        box-shadow: none;
+        border: #317ee7 solid 1px; }
+      .t_page .p_bottom .page_num input:hover {
+        box-shadow: none;
+        border: #317ee7 solid 1px; }
+    .t_page .p_bottom .page_num span {
+      color: #777;
+      margin-left: 10px;
+      float: left; }
+      .t_page .p_bottom .page_num span em {
+        margin: 0 3px; }
+
+/*top10*/
+.top10 {
+  width: 1200px;
+  margin: 0 auto;
+  background: #f7f7f7;
+  position: relative;
+  padding-bottom: 35px;
+  height: 290px;
+  position: relative;
+  overflow: hidden; }
+  .top10 h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 100%;
+    background: #fff;
+    padding-bottom: 10px; }
+  .top10 .btn {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    z-index: 100;
+    margin-left: -32px; }
+    .top10 .btn span {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      font-size: 0px;
+      width: 12px;
+      height: 12px;
+      line-height: 12px;
+      cursor: pointer;
+      float: left;
+      margin-left: 5px;
+      display: inline;
+      text-align: center;
+      background: #ccc;
+      border-radius: 50px;
+      color: #fff; }
+      .top10 .btn span.cur {
+        background: #0f80e3; }
+  .top10 .preNext {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    border-radius: 2px;
+    width: 25px;
+    height: 65px;
+    overflow: hidden;
+    position: absolute;
+    top: 125px;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+    background: #ccc url("../../images/detail_ico_2015.png") 0px 0px; }
+  .top10 .pre {
+    left: 8px;
+    background-position: -281px 15px; }
+  .top10 .next {
+    right: 8px;
+    background-position: -279px -36px; }
+  .top10 .mask-l {
+    left: 0px;
+    background: #f7f7f7;
+    z-index: 10;
+    width: 40px;
+    height: 260px;
+    position: absolute; }
+  .top10 .mask-r {
+    right: 0px;
+    background: #f7f7f7;
+    z-index: 10;
+    width: 40px;
+    height: 260px;
+    position: absolute; }
+  .top10 .toplist {
+    width: 1150px;
+    margin: 0 auto;
+    overflow: hidden; }
+  .top10 .banner {
+    width: 11500px;
+    margin: 0 40px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 9; }
+    .top10 .banner ul {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      position: relative;
+      float: left; }
+      .top10 .banner ul li {
+        float: left;
+        margin-right: 30px;
+        width: 180px;
+        background: #fff;
+        margin-top: 10px;
+        position: relative;
+        padding: 10px;
+        height: 200px; }
+        .top10 .banner ul li i {
+          display: block;
+          background: url("../../images/detail_ico_2015.png") -1px -248px;
+          width: 42px;
+          height: 40px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-style: normal;
+          color: #fff;
+          padding-left: 6px;
+          padding-top: 1px;
+          font-size: 14px;
+          z-index: 9999; }
+          .top10 .banner ul li i.top1 {
+            background-position: -1px -74px; }
+          .top10 .banner ul li i.top2 {
+            background-position: -1px -130px; }
+          .top10 .banner ul li i.top3 {
+            background-position: -1px -190px; }
+        .top10 .banner ul li .wrap-img {
+          width: 180px;
+          height: 120px;
+          line-height: 120px;
+          border: #eee solid 1px;
+          overflow: hidden;
+          margin-bottom: 10px;
+          text-align: left;
+          padding: 1px; }
+          .top10 .banner ul li .wrap-img a {
+            display: inline-block;
+            width: 100%;
+            text-align: center; }
+            .ie7 .top10 .banner ul li .wrap-img a {
+              position: absolute;
+              top: 50%; }
+          .top10 .banner ul li .wrap-img img {
+            max-width: 180px;
+            max-height: 120px;
+            vertical-align: middle; }
+            .ie7 .top10 .banner ul li .wrap-img img {
+              position: relative;
+              top: -50%; }
+          .ie7 .top10 .banner ul li .wrap-img {
+            position: relative; }
+          .top10 .banner ul li .wrap-img:hover {
+            border: #317ee7 solid 2px;
+            padding: 0px; }
+        .top10 .banner ul li p {
+          margin-top: 5px;
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 12px; }
+    .ie7 .top10 .banner {
+      margin-top: 10px; }
+  .top10:hover .preNext {
+    display: block; }
+
+.catalog_pan {
+  margin-top: 5px; }
+  .catalog_pan span {
+    position: relative;
+    border: 1px solid #DDD;
+    padding: 0px 32px 0px 10px;
+    margin-right: 8px;
+    color: #888;
+    font-size: 14px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 30px;
+    line-height: 30px; }
+    .catalog_pan span i {
+      font-size: 28px;
+      font-family: Arial;
+      position: absolute;
+      right: 8px;
+      top: 1px; }
+
+.search_list {
+  background: #eee;
+  width: 857px;
+  height: 39px;
+  line-height: 35px;
+  margin-top: 8px;
+  margin-bottom: 5px; }
+  .search_list span {
+    margin-left: 10px;
+    color: #666; }
+  .search_list a {
+    color: #888;
+    background-color: #FFF; }
+    .search_list a:hover {
+      color: #317ee7; }
+    .search_list a.catalog {
+      border: #dddddd solid 1px;
+      padding: 3px 10px;
+      margin-left: 5px; }
+      .search_list a.catalog:hover {
+        color: #fff;
+        background: #0f80e3;
+        border: 0;
+        padding: 4px 11px; }
+    .search_list a.cancel {
+      border: #dddddd solid 1px;
+      padding: 3px 10px;
+      margin-left: 8px; }
+      .search_list a.cancel i {
+        margin-left: 8px;
+        font-size: 14px;
+        font-family: Arial; }
+      .search_list a.cancel:hover {
+        color: #317ee7;
+        border: #317ee7 solid 1px; }
+  .search_list .so-result {
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-left: 5px; }
+    .search_list .so-result .txt {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%;
+      height: 21px;
+      line-height: 21px;
+      color: #999; }
+      .ie7 .search_list .so-result .txt {
+        height: 20px;
+        line-height: 20px; }
+    .search_list .so-result .btn {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      position: absolute;
+      z-index: 10;
+      right: -7px;
+      top: 5px;
+      background: url("../../images/ico_supplier_list.png") -136px -35px;
+      width: 25px;
+      height: 25px;
+      border: 0; }
+
+.interest_list {
+  width: 100%;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border: #ddd solid 1px;
+  margin-top: 20px; }
+  .interest_list h3 {
+    background: #f5f5f5;
+    font-size: 18px;
+    color: #333;
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: #ddd solid 1px; }
+  .interest_list ul {
+    width: 105%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-top: 20px;
+    padding-bottom: 10px; }
+    .interest_list ul li {
+      float: left;
+      width: 115px;
+      margin-right: 8px;
+      margin-left: 20px; }
+      .interest_list ul li .wrap-img {
+        width: 115px;
+        height: 115px;
+        line-height: 115px;
+        border: #ddd solid 1px;
+        overflow: hidden;
+        text-align: left;
+        background: #fff;
+        padding: 1px;
+        margin-bottom: 10px; }
+        .interest_list ul li .wrap-img a {
+          display: inline-block;
+          width: 100%;
+          text-align: center; }
+          .ie7 .interest_list ul li .wrap-img a {
+            position: absolute;
+            top: 50%; }
+        .interest_list ul li .wrap-img img {
+          max-width: 115px;
+          max-height: 115px;
+          vertical-align: middle; }
+          .ie7 .interest_list ul li .wrap-img img {
+            position: relative;
+            top: -50%; }
+        .ie7 .interest_list ul li .wrap-img {
+          position: relative; }
+        .interest_list ul li .wrap-img:hover {
+          border: #317ee7 solid 2px;
+          padding: 0; }
+      .interest_list ul li p {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+        .interest_list ul li p a {
+          font-size: 12px;
+          color: #888; }
+          .interest_list ul li p a.casno {
+            color: #317ee7; }
+            .interest_list ul li p a.casno:hover {
+              color: #FF771C; }
+          .interest_list ul li p a:hover {
+            color: #317ee7; }
+
+.interest_list_long {
+  width: 1198px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border: #ddd solid 1px;
+  margin-top: 20px; }
+  .interest_list_long h3 {
+    background: #f5f5f5;
+    font-size: 18px;
+    color: #333;
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: #ddd solid 1px; }
+  .interest_list_long .interes_tab {
+    background: #f5f5f5;
+    font-size: 18px;
+    color: #333;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ddd; }
+    .interest_list_long .interes_tab li {
+      float: left;
+      width: 144px;
+      background: #f7f7f7;
+      color: #333;
+      cursor: pointer;
+      font-size: 14px;
+      border-right: 1px solid #ddd;
+      height: 35px;
+      line-height: 35px;
+      text-align: center; }
+    .interest_list_long .interes_tab .curr {
+      background: #fff;
+      border-bottom: 0 none;
+      height: 36px; }
+    .interest_list_long .interes_tab .mite {
+      border-left: none; }
+  .interest_list_long .interest_page {
+    width: 105%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-top: 20px;
+    padding-bottom: 10px; }
+    .interest_list_long .interest_page li {
+      float: left;
+      width: 120px;
+      margin-right: 8px;
+      margin-left: 20px; }
+      .interest_list_long .interest_page li .wrap-img {
+        width: 120px;
+        height: 120px;
+        line-height: 118px;
+        border: #ddd solid 1px;
+        overflow: hidden;
+        text-align: left;
+        background: #fff;
+        padding: 1px;
+        margin-bottom: 10px; }
+        .interest_list_long .interest_page li .wrap-img a {
+          display: inline-block;
+          width: 100%;
+          text-align: center; }
+          .ie7 .interest_list_long .interest_page li .wrap-img a {
+            position: absolute;
+            top: 50%; }
+        .interest_list_long .interest_page li .wrap-img img {
+          max-width: 120px;
+          max-height: 120px;
+          vertical-align: middle; }
+          .ie7 .interest_list_long .interest_page li .wrap-img img {
+            position: relative;
+            top: -50%; }
+        .ie7 .interest_list_long .interest_page li .wrap-img {
+          position: relative; }
+        .interest_list_long .interest_page li .wrap-img:hover {
+          border: #317ee7 solid 2px;
+          padding: 0; }
+      .interest_list_long .interest_page li p {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+        .interest_list_long .interest_page li p a {
+          font-size: 12px;
+          color: #888; }
+          .interest_list_long .interest_page li p a.casno {
+            color: #317ee7; }
+            .interest_list_long .interest_page li p a.casno:hover {
+              color: #FF771C; }
+          .interest_list_long .interest_page li p a:hover {
+            color: #317ee7; }
+
+.quick_nav {
+  width: 1178px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border: #ddd solid 1px;
+  margin-top: 10px;
+  padding: 10px;
+  padding-bottom: 0px; }
+  .ie7 .quick_nav {
+    padding-bottom: 2%; }
+  .quick_nav dl {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    float: left;
+    margin-bottom: 5px; }
+    .ie7 .quick_nav dl {
+      margin-bottom: 15px; }
+    .quick_nav dl dt {
+      float: left;
+      font-weight: bold;
+      color: #333;
+      width: 5%; }
+    .quick_nav dl dd {
+      float: left;
+      width: 95%;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-bottom: 5px; }
+      .quick_nav dl dd a {
+        color: #777;
+        margin-left: 16px;
+        margin-bottom: 5px;
+        float: left;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        white-space: nowrap; }
+        .quick_nav dl dd a:hover {
+          color: #0F80E3; }
+
+.quick_nav_long {
+  width: 1174px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border: #ddd solid 1px;
+  margin-top: 15px;
+  padding: 1% 1% 0 1%; }
+  .ie7 .quick_nav_long {
+    padding-bottom: 2%; }
+  .quick_nav_long dl {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    float: left;
+    margin-bottom: 5px; }
+    .ie7 .quick_nav_long dl {
+      margin-bottom: 15px; }
+    .quick_nav_long dl dt {
+      float: left;
+      color: #333;
+      width: 10%;
+      font-size: 14px; }
+    .quick_nav_long dl dd {
+      float: left;
+      width: 90%;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin-bottom: 5px;
+      white-space: nowrap; }
+      .quick_nav_long dl dd a {
+        color: #777;
+        margin-left: 16px;
+        margin-bottom: 5px;
+        float: left;
+        max-width: 84px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+        .quick_nav_long dl dd a:hover {
+          color: #0F80E3; }
+
+.pagination-jump li {
+  float: left; }
+  .pagination-jump li span {
+    margin-top: 6px;
+    margin-right: 10px; }
+  .pagination-jump li.disabled span {
+    font-size: 20px;
+    color: #DEDEDE;
+    cursor: auto;
+    margin-top: 0px;
+    margin-right: 0; }
+  .pagination-jump li a {
+    color: #317EE7;
+    font-size: 20px;
+    margin-right: 10px; }
+
+.page_loading {
+  background: #fff;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: none;
+  z-index: 9999; }
+  .page_loading img {
+    margin-top: 20%; }
+
+.recommend {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100%; }
+  .recommend .hot_chemical {
+    width: 825px;
+    border: #ddd solid 1px;
+    padding: 10px;
+    padding-top: 8px; }
+    .ie7 .recommend .hot_chemical {
+      padding-bottom: 15px; }
+    .recommend .hot_chemical .hot_top {
+      padding-bottom: 10px;
+      border-bottom: #ddd solid 1px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%;
+      margin-bottom: 10px;
+      position: relative; }
+      .recommend .hot_chemical .hot_top h2 {
+        font-size: 18px;
+        color: #333;
+        float: left; }
+      .recommend .hot_chemical .hot_top .staus {
+        float: right;
+        position: absolute;
+        top: 10px;
+        right: 0px; }
+        .recommend .hot_chemical .hot_top .staus li {
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          width: 8px;
+          height: 8px;
+          background: #c9c9c9;
+          -moz-border-radius: 50px;
+          -webkit-border-radius: 50px;
+          border-radius: 50px;
+          font-size: 0px;
+          margin-left: 5px;
+          font-size: 0px;
+          cursor: pointer; }
+          .recommend .hot_chemical .hot_top .staus li.active {
+            background: #317ee7; }
+          .recommend .hot_chemical .hot_top .staus li:hover {
+            background: #317ee7; }
+    .recommend .hot_chemical .product_con {
+      width: 825px;
+      height: 260px; }
+      .recommend .hot_chemical .product_con ul {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1; }
+        .recommend .hot_chemical .product_con ul li {
+          float: left;
+          height: 260px;
+          position: relative; }
+          .recommend .hot_chemical .product_con ul li p {
+            font-size: 12px; }
+            .recommend .hot_chemical .product_con ul li p.more {
+              color: #555;
+              text-align: right;
+              width: 100%;
+              position: absolute;
+              bottom: 0px;
+              right: 0px;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1; }
+              .recommend .hot_chemical .product_con ul li p.more a {
+                color: #555;
+                float: right; }
+                .recommend .hot_chemical .product_con ul li p.more a:hover {
+                  color: #FF771C; }
+                .recommend .hot_chemical .product_con ul li p.more a span {
+                  display: inline-block;
+                  *display: inline;
+                  *zoom: 1;
+                  float: left; }
+                .recommend .hot_chemical .product_con ul li p.more a em {
+                  color: #317ee7;
+                  display: inline-block;
+                  *display: inline;
+                  *zoom: 1;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  width: 500px;
+                  float: left; }
+                  .recommend .hot_chemical .product_con ul li p.more a em:hover {
+                    color: #FF771C; }
+          .recommend .hot_chemical .product_con ul li .company_list {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            width: 100%;
+            padding-top: 5px;
+            position: absolute;
+            bottom: 25px;
+            left: 0px; }
+            .recommend .hot_chemical .product_con ul li .company_list a {
+              color: #777;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1;
+              width: 250px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              margin-bottom: 5px;
+              float: left;
+              font-size: 12px;
+              margin-right: 20px; }
+              .recommend .hot_chemical .product_con ul li .company_list a:hover {
+                color: #317ee7; }
+          .recommend .hot_chemical .product_con ul li dl {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            width: 100%;
+            border-bottom: #ddd dotted 1px;
+            padding-bottom: 5px; }
+            .ie7 .recommend .hot_chemical .product_con ul li dl {
+              padding-bottom: 10px; }
+            .recommend .hot_chemical .product_con ul li dl dt {
+              width: 140px;
+              position: relative;
+              float: left; }
+              .recommend .hot_chemical .product_con ul li dl dt .wrap-img {
+                width: 140px;
+                height: 140px;
+                line-height: 140px;
+                overflow: hidden;
+                border: #ddd solid 1px;
+                text-align: left; }
+                .recommend .hot_chemical .product_con ul li dl dt .wrap-img a {
+                  display: inline-block;
+                  width: 100%;
+                  text-align: center; }
+                  .ie7 .recommend .hot_chemical .product_con ul li dl dt .wrap-img a {
+                    position: absolute;
+                    top: 50%; }
+                .recommend .hot_chemical .product_con ul li dl dt .wrap-img img {
+                  max-width: 138px;
+                  max-height: 138px;
+                  vertical-align: middle; }
+                  .ie7 .recommend .hot_chemical .product_con ul li dl dt .wrap-img img {
+                    position: relative;
+                    top: -50%; }
+                .ie7 .recommend .hot_chemical .product_con ul li dl dt .wrap-img {
+                  position: relative; }
+              .recommend .hot_chemical .product_con ul li dl dt .mask {
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                width: 140px;
+                height: 140px;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                transition: all 0.6s ease 0s;
+                z-index: 0; }
+                .recommend .hot_chemical .product_con ul li dl dt .mask .bg {
+                  width: 140px;
+                  height: 140px;
+                  opacity: 0.5;
+                  filter: alpha(opacity=50);
+                  background: #000;
+                  z-index: 9;
+                  position: absolute;
+                  top: 0;
+                  left: 0; }
+                .recommend .hot_chemical .product_con ul li dl dt .mask a {
+                  display: block;
+                  width: 30px;
+                  float: left;
+                  position: relative;
+                  z-index: 10;
+                  padding-top: 35px;
+                  cursor: pointer;
+                  margin-right: 5px;
+                  margin-left: 38px; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask a i {
+                    display: block;
+                    background: url("../../images/moldata_ico.png") no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    margin: 10px auto 1px; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask a p {
+                    text-align: center;
+                    color: #fff;
+                    background: url("../../images/moldata_ico.png") -100px 0px no-repeat;
+                    width: 76px;
+                    height: 30px;
+                    line-height: 36px;
+                    margin-left: -24px;
+                    display: none; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask a:hover i {
+                    background-position: 0 -46px; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask a:hover p {
+                    display: block; }
+                .recommend .hot_chemical .product_con ul li dl dt .mask .view_img {
+                  display: block;
+                  width: 30px;
+                  float: left;
+                  position: relative;
+                  z-index: 10;
+                  padding-top: 35px; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask .view_img:hover .wrap-bigimg {
+                    display: block; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask .view_img .wrap-bigimg {
+                    width: 280px;
+                    height: 280px;
+                    line-height: 280px;
+                    overflow: hidden;
+                    border: #ddd solid 1px;
+                    text-align: left;
+                    position: absolute;
+                    right: -330px;
+                    top: -50px;
+                    background: #fff;
+                    display: none; }
+                    .recommend .hot_chemical .product_con ul li dl dt .mask .view_img .wrap-bigimg span {
+                      display: inline-block;
+                      width: 100%;
+                      text-align: center; }
+                      .ie7 .recommend .hot_chemical .product_con ul li dl dt .mask .view_img .wrap-bigimg span {
+                        position: absolute;
+                        top: 50%; }
+                    .recommend .hot_chemical .product_con ul li dl dt .mask .view_img .wrap-bigimg img {
+                      max-width: 280px;
+                      max-height: 280px;
+                      vertical-align: middle; }
+                      .ie7 .recommend .hot_chemical .product_con ul li dl dt .mask .view_img .wrap-bigimg img {
+                        position: relative;
+                        top: -50%; }
+                    .ie7 .recommend .hot_chemical .product_con ul li dl dt .mask .view_img .wrap-bigimg {
+                      position: relative; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask .view_img i {
+                    display: block;
+                    background: url("../../images/moldata_ico.png") -43px 0px no-repeat;
+                    width: 30px;
+                    height: 30px;
+                    margin: 10px auto 1px; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask .view_img p {
+                    text-align: center;
+                    color: #fff;
+                    background: url("../../images/moldata_ico.png") -100px 0px no-repeat;
+                    width: 76px;
+                    height: 30px;
+                    line-height: 36px;
+                    margin-left: -24px;
+                    display: none; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask .view_img:hover i {
+                    background-position: -44px -47px; }
+                  .recommend .hot_chemical .product_con ul li dl dt .mask .view_img:hover p {
+                    display: block; }
+              .recommend .hot_chemical .product_con ul li dl dt:hover .mask {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                z-index: 99; }
+            .recommend .hot_chemical .product_con ul li dl dd {
+              float: left;
+              width: 650px;
+              margin-left: 20px; }
+              .recommend .hot_chemical .product_con ul li dl dd .title {
+                font-size: 18px;
+                color: #333;
+                display: block;
+                margin-bottom: 4px;
+                cursor: pointer; }
+                .recommend .hot_chemical .product_con ul li dl dd .title:hover {
+                  color: #317ee7; }
+                .recommend .hot_chemical .product_con ul li dl dd .title h3 {
+                  width: 650px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden; }
+              .recommend .hot_chemical .product_con ul li dl dd p {
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                width: 100%;
+                margin-bottom: 5px;
+                font-size: 12px; }
+                .recommend .hot_chemical .product_con ul li dl dd p.en-name {
+                  color: #000;
+                  width: 650px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden; }
+                  .recommend .hot_chemical .product_con ul li dl dd p.en-name a {
+                    color: #777; }
+                    .recommend .hot_chemical .product_con ul li dl dd p.en-name a:hover {
+                      color: #317ee7; }
+                .recommend .hot_chemical .product_con ul li dl dd p.cno span {
+                  margin-right: 100px; }
+                .recommend .hot_chemical .product_con ul li dl dd p.cno a {
+                  color: #317ee7; }
+                  .recommend .hot_chemical .product_con ul li dl dd p.cno a:hover {
+                    color: #FF771C; }
+                .recommend .hot_chemical .product_con ul li dl dd p.zh-name span {
+                  width: 450px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  display: inline-block;
+                  *display: inline;
+                  *zoom: 1; }
+                  .recommend .hot_chemical .product_con ul li dl dd p.zh-name span a {
+                    color: #777; }
+                    .recommend .hot_chemical .product_con ul li dl dd p.zh-name span a:hover {
+                      color: #317ee7; }
+                .recommend .hot_chemical .product_con ul li dl dd p.zh-name .more {
+                  width: auto; }
+                  .recommend .hot_chemical .product_con ul li dl dd p.zh-name .more a {
+                    color: #317ee7; }
+                    .recommend .hot_chemical .product_con ul li dl dd p.zh-name .more a:hover {
+                      color: #FF771C; }
+                .recommend .hot_chemical .product_con ul li dl dd p.info a {
+                  display: block;
+                  height: 25px;
+                  line-height: 25px;
+                  color: #555;
+                  float: left;
+                  border: #ddd solid 1px;
+                  padding: 1px 10px;
+                  margin-right: 5px; }
+                  .recommend .hot_chemical .product_con ul li dl dd p.info a:hover {
+                    background: #317ee7;
+                    border: 0;
+                    color: #fff;
+                    padding: 2px 11px; }
+  .recommend .hot_so {
+    padding: 10px 12px;
+    border: #ddd solid 1px;
+    width: 315px;
+    margin-left: 10px;
+    height: 313px;
+    padding-top: 8px; }
+    .recommend .hot_so h2 {
+      padding-bottom: 10px;
+      border-bottom: #ddd solid 1px;
+      color: #333;
+      font-size: 18px; }
+    .recommend .hot_so ul {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 110%;
+      margin-top: 12px; }
+      .recommend .hot_so ul li {
+        float: left;
+        width: 100px;
+        margin-bottom: 8px;
+        margin-right: 8px;
+        background: #eee; }
+        .recommend .hot_so ul li a {
+          display: block;
+          width: 90px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          color: #777;
+          margin: 0 auto;
+          background: #eee;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+          .recommend .hot_so ul li a:hover {
+            color: #fff;
+            background: #317ee7; }
+        .recommend .hot_so ul li:hover {
+          color: #fff;
+          background: #317ee7; }
+
+.catalog_detail {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 1198px;
+  margin-top: 10px;
+  border: #ddd solid 1px;
+  padding: 5px 0px; }
+  .catalog_detail .fl {
+    width: 575px;
+    margin: 0px 12px 0px 12px; }
+    .catalog_detail .fl h2 {
+      margin-top: 7px;
+      font-size: 18px;
+      color: #333;
+      padding-left: 5px;
+      height: 22px;
+      line-height: 22px;
+      float: left;
+      width: 570px; }
+      .catalog_detail .fl h2 a {
+        color: #333; }
+        .catalog_detail .fl h2 a:hover {
+          color: #317ee7; }
+    .catalog_detail .fl dl {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%; }
+      .catalog_detail .fl dl dt {
+        float: left;
+        font-weight: bold;
+        color: #333;
+        width: 125px; }
+        .catalog_detail .fl dl dt a {
+          color: #333; }
+          .catalog_detail .fl dl dt a:hover {
+            color: #317ee7; }
+      .catalog_detail .fl dl dd {
+        float: left;
+        width: 450px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-bottom: 5px;
+        white-space: nowrap; }
+        .catalog_detail .fl dl dd a {
+          color: #777;
+          margin-left: 16px;
+          margin-bottom: 5px;
+          float: left; }
+          .catalog_detail .fl dl dd a.more {
+            color: #317ee7; }
+            .catalog_detail .fl dl dd a.more:hover {
+              color: #FF771C; }
+          .catalog_detail .fl dl dd a:hover {
+            color: #0F80E3; }
+    .catalog_detail .fl .tit {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 100%;
+      position: relative; }
+      .catalog_detail .fl .tit .more {
+        display: block;
+        width: 50px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #777;
+        border: 1px solid #DDD;
+        position: absolute;
+        right: 0px;
+        top: 8px; }
+        .catalog_detail .fl .tit .more:hover {
+          border: 1px solid #CCC; }
+      .catalog_detail .fl .tit i {
+        border-bottom: #ddd solid 1px;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+        float: left;
+        width: 100%;
+        margin-top: 3px; }
+  .catalog_detail .c1 h2 {
+    border-left: #488fef solid 6px; }
+  .catalog_detail .c2 h2 {
+    border-left: #fd5548 solid 6px; }
+  .catalog_detail .c3 h2 {
+    border-left: #f4ce33 solid 6px; }
+  .catalog_detail .c4 h2 {
+    border-left: #70be2d solid 6px; }
+  .catalog_detail .c5 h2 {
+    border-left: #48ccbf solid 6px; }
+  .catalog_detail .c6 h2 {
+    border-left: #f67823 solid 6px; }
+
+.moldata_banner {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .moldata_banner img {
+    width: 1200px;
+    height: 100px; }

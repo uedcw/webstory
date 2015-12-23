@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss";
+
+.moldata_catalog{
+	.choose{
+		border:#ddd solid 1px; display: inline-block;
+		.tab{
+			border-bottom: #ddd solid 1px;@include inline-block;width:100%;
+			li{
+				float: left;height: 38px;background: #f8f8f8;
+				a{
+					display: block;height: 38px;line-height: 38px;font-size: 14px;color: #333;border-right: #ddd solid 1px;padding:0 20px;
+					&.cur{
+						background: #fff;height: 39px;
+					}
+					//&:hover{background: #fff;height: 39px;}
+				}
+			}
+		}
+		.tab-con{
+			width: 95%;float: left;margin-left: 30px;margin-top: 10px;margin-bottom: -10px;@include inline-block;
+			dl{
+				border-bottom: dotted #ddd 1px;padding: 10px 0px 15px;@include inline-block;width:100%;
+				dt{
+					color: #333;font-weight: bold;float:left;width:134px;
+					a{
+						color: #333;
+						&:hover{
+							color: #317ee7
+						}
+					}
+				}
+				dd{
+					float:left;@include inline-block;width: 1000px;position: relative;
+					&.cur{
+						padding-bottom: 30px;
+					}
+					.nav{
+						float: left;
+						.link{
+							color: #555;padding:2px 5px;margin-right: 15px;margin-left: -5px;@include inline-block;word-wrap: normal;
+							&.cur{color:#fff;background: #317EE7;}
+							&:hover{color:#fff;background: #317EE7;}
+						}
+					}
+					.selected{
+						.sub-items{@include inline-block;}
+					}
+					.sub-items{
+						width:100%;background: #f8f8f8;border: #ddd solid 1px;height:32px;line-height: 32px;margin-top: 15px;margin-bottom: 5px;@include inline-block;
+						a{
+							margin-left: 10px;padding:0;margin-right: 10px;color:#555;@include inline-block;word-wrap: normal;
+							//&:hover{color:#317EE7;background: none;}
+							&.cur{background: none;color:#317EE7;}
+                            &:hover{color:#ff6600;}
+						}
+					}
+				}
+				&.bd0{
+					border: 0;margin-bottom: 20px;
+					.sub-items{margin-bottom: 15px;}
+				}
+				&.cur{@include inline-block;}
+			}
+		}
+		.choose-bottom{
+			background: #eee;height:4px;width:99%;position: relative;bottom: -5px;float: left;margin-left: 5px;
+			.expand{
+				margin:0 auto;display: block;background: url('../../images/detail_ico_2015.png') -247px -107px no-repeat;width:53px;height:10px;position: relative;bottom: 1px;
+			}
+			.cur{
+				background-position:  -247px -127px;
+			}
+		}
+	}
+}
+.cur_tit{
+	float: left;margin-top: 3px;font-size: 16px;color:#333;
+}
+.catalog_list{
+	width:100%;margin-top: 40px;
+	.list_con{
+		@include inline-block;width:1213px;margin-top: 10px;
+		dl{
+			border: #ddd solid 1px;@include inline-block;width: 588px;margin-right: 1%;padding:1px;margin-bottom: 10px;
+			dt{
+				float: left;width:110px;height:110px;border-right: #ddd solid 1px;
+				.wrap-img{width: 110px;height: 110px;line-height: 110px; overflow: hidden;text-align: left;
+					a{display: inline-block;width: 100%;text-align: center;
+						.ie7 &{position:absolute;top:50%;}
+					}
+					img{max-width: 110px;max-height: 110px;vertical-align: middle;
+						.ie7 &{position:relative;top:-50%;}
+					}
+					.ie7 &{position: relative;}
+				}
+			}
+			dd{
+				float: left;width: 465px;padding-left: 10px;
+				.title{
+					font-size: 14px;color:#333;margin-bottom: 8px;margin-top: 10px;display: block;cursor: pointer;
+					&:hover{color:#317EE7;}
+					h3{width:460px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+				}
+				p{
+					color: #777;margin-top: 3px;
+					a{
+						color: #333;
+						&:hover{color:#317EE7;}
+					}
+				}
+				.name{
+					width: 450px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+				}
+			}
+			&:hover{
+				border: #ff6600 solid 2px;padding:0px;
+			}
+		}
+	}
+}
+
+

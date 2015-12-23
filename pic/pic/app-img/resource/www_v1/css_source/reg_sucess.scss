@@ -1,0 +1,58 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss";
+body{background:#f8f8f8;}
+.wrap{width:1000px;}
+.reg_head{
+	width:100%;padding:25px 0px 5px 0px ;float: left;background:#f2f2f2;
+	.logo{
+		float: left;
+		.logo_img{
+			background: url('../../images/ico_login.png') no-repeat;width:165px;height: 65px;float:left;
+			display: block;
+		}
+		span{
+			float: left;display:block;height:24px;color:#444;font-size: 22px;margin-top: 5px;
+			&.line{
+				width: 2px;border-right: #ccc solid 1px;margin: 11px 12px 0px 0px;
+			}
+		}
+	}
+	.tel{
+		float: right;margin-top: 5px;
+		span{
+			font-size: 16px;color:#444;
+		}
+		em{
+			font-size: 18px;color:#ff1e00;
+			&.time{
+				font-size: 12px;color:#444;margin-left: 3px;
+			}
+		}
+	}
+}
+.reg_form{
+	width:100%;background:#fff;@include inline-block;
+	.message{
+		width: 350px;margin:130px auto;margin-bottom: 150px;
+		i{
+			width: 75px;height:68px;background: url('../../images/ico_login.png') 0px -258px no-repeat;
+			display:block;margin-top: 2px;margin:0 auto;margin-bottom: 10px;
+		}
+		p{
+			font-size: 14px;color:#888;text-align: center;
+			&.tit{
+				font-size: 24px;color:#555;margin-top: 20px;margin-bottom: 20px;
+			}
+		}
+		.btn04{
+			height:55px;line-height: 55px;color:#fff;text-align: center;display:block;
+			width: 320px;font-size: 18px;margin:30px auto;
+		}
+	}
+}
+.reg_foot{
+	background:#f8f8f8;width:100%;border-top: #ddd solid 1px;padding-bottom: 50px;
+}

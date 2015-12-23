@@ -1,0 +1,1 @@
+define([],function(){return function(e,t,n){return n=n||document.location.search,n.urlArg(e,t)}});

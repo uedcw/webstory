@@ -1,0 +1,90 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+@import "setting.scss";
+@import "compass", "reset.scss", "public.scss";
+
+/*
+@include legacy-pie-clearfix;
+@include pie-clearfix;
+@include clearfix;
+
+@include inline-block;
+
+# 透明
+@include opacity(0.1);
+
+# 圆角
+@include border-radius(25px);
+@include border-top-left-radius(25px);
+@include border-top-right-radius(25px);
+@include border-bottom-left-radius(25px);
+@include border-bottom-right-radius(25px);
+@include border-top-radius(25px);
+@include border-bottom-radius(25px);
+@include border-left-radius(25px);
+@include border-right-radius(25px);
+@include border-corner-radius(top, left, 40px);
+@include border-corner-radius(top, right, 5px);
+@include border-corner-radius(bottom, left, 15px);
+@include border-corner-radius(bottom, right, 30px);
+
+# 图片
+$<imgDir>-spacing: 10px;
+$<imgDir>-layout: smart;
+@include all-<imgDir>-sprites;
+
+.<imgDir>-twitter {
+	@include icos-sprite(gongying_6);
+}
+
+.icon {
+	background-image: image-url("gongying_0.png");
+	width:image-width("gongying_0.png");
+	height:image-height("gongying_0.png");
+}
+
+*/
+
+
+$icos-spacing: 20px;
+
+//$icos-repeat: repeat-x; // 这个设置后,图片生成后会横向平铺
+$icos-gongying_0-repeat: repeat-x; //指定某个图片平铺到图片总宽度
+//$icos-position: 100%;
+
+//$icos-layout: smart;	// vertical(竖排,默认), horizontal(横排), diagonal(梯状), smart(智能)
+//$icos-sprite-dimensions:true;
+//$icos-sprite-base-class: ".action-icon";
+@import "icos/*.png";
+@include all-icos-sprites;
+
+.icon-twitter {
+	@include icos-sprite("gongying_6");
+}
+
+
+.icon {
+	background-image: image-url("gongying_0.png");
+	width:image-width("gongying_0.png");
+	height:image-height("gongying_0.png");
+}
+
+
+.rj{
+	@include border-radius(25px);
+}
+
+.aa{
+	@include clearfix;
+	padding: 10px;
+	.bb{color:red;}
+}
+.bb{
+	@include inline-block;
+}
+
+
+.test{
+	@include min-height(900px);
+	@include min-width(100px);
+}

@@ -1,0 +1,238 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss";   
+@import "pub_css/wintpl.scss";
+@import "pub_css/c-z-dialog.scss";		// dialog弹出窗口层
+.menu_new_sec{z-index:99}
+.jr_tit{
+	width:100%; background: #15337c; height: 500px;overflow: hidden;
+	.banner{
+		width: 1504px;margin: 0 auto;height:500px;overflow: hidden; background: url("../../images/dai_banner.png") no-repeat;position: relative;
+		.btn{
+			position: absolute;bottom:98px;left:50%;margin-left:-15px;
+			a{
+				display: block;width:210px;height:60px;line-height: 54px;background:#fae86a;font-weight: bold;
+				font-size: 30px;color:#112d7b;@include border-radius(50px);text-align:center;
+				&:hover{
+					background:#ebda66;
+				}
+			}
+		}
+		.countdown{
+			width: 160px;height:360px;position: absolute;right:226px;top:10px;
+			.top{
+				background:#fff;border-top: #333 solid 10px;padding:10px;width:140px;padding-top: 5px;
+				h3{
+					color: #222;font-size: 14px;
+				}
+				.day{
+					@include inline-block;margin-top: 5px;
+					span{
+						color: #333;font-size: 30px;float: left;margin-left: 5px;margin-top: 25px;font-weight: bold;
+						&.day{
+							color: #fff;font-size: 60px;background: url("../../images/dai_ico.png") 0px -104px repeat-x;display:block;
+							width: 82px;height: 70px;line-height: 62px;padding-left: 4px;letter-spacing: 7px;font-weight: normal;margin:0;
+						}
+					}
+				}
+				.hour{
+					margin-top: -8px;
+					span{
+						font-size: 16px;color:#333;margin-right:2px;
+						&.hour{
+							color: #c8100e;font-size: 22px;margin-right:1px;font-family:arial;
+						}
+					}
+				}
+			}
+			.code{
+				background:#f2252a;padding:10px 10px 10px 8px;margin-top: -8px;*margin-top: -0px;
+				p{
+					font-size: 14px;color:#fff;text-align: left;margin-top: 3px;
+					em{
+						color: #ffe00b;
+					}
+				}
+			}
+		}
+	}
+}
+.jr_how{
+	 background:#15337c url("../../images/dai_bg2.png") 0 bottom  no-repeat;height:566px;position: relative;z-index:9;
+	 .con{
+		width: 1218px;height:632px;overflow: hidden; background: url("../../images/dai_bg0.png") no-repeat;position: absolute;bottom:-62px;
+		left: 50%;margin-left:-605px;
+		h2{
+			width: 100%;text-align: center;line-height: 150px;font-size: 36px;color: #c07b0e;
+		}
+		.partake_form{
+			width: 330px;
+			h3{
+				font-size: 18px;color:#c07b0e;background: url("../../images/dai_ico.png") 80px 0px no-repeat;
+			}
+			position: absolute;top:110px;left:120px;
+			ul{
+				margin-top: 20px;width:100%;
+				li{
+					padding-bottom:22px;position: relative;@include inline-block;width:100%;
+					label{
+						@include inline-block;width: 77px;text-align:right;color:#625548;font-size: 16px;height:35px;
+						line-height: 35px;margin-right:5px;
+						em{
+							color: #ff0000;margin-right: 3px;
+						}
+					}
+					input{
+						height:35px;line-height: 35px;@include inline-block;width:235px;@include border-radius(5px);font-size: 14px;color:#625548;
+					}
+					span{
+						&.tips{
+							position: absolute;bottom:2px;left:85px;color:#ea2e2f;
+						}
+					}
+					.btn{
+						display: block;float: right;width:243px;text-align:center;color:#fff;background:#fe4c2e;@include border-radius(5px);
+						border: 0;height:48px;line-height: 48px;font-size: 18px;
+						&:hover{
+							background: #e7482d;
+						}
+					}
+				}
+			}
+		}
+		.partake_table{
+			position: absolute;top:165px;right:135px;
+			.form{
+					border: #ddd solid 1px;
+				}
+			table{
+				width: 530px;
+				tr{
+					background:#fff;
+					&.grey{
+						background:#f5f5f5;
+					}
+				}
+				th{
+					font-size: 18px;color:#fff;text-align: center;padding:5px 0px;width:33.3%;border-right: #ddd solid 1px;
+					&.tit{
+						background:#ffb152;
+					}
+					&.price{
+						background:#b4d033;
+					}
+					&.days{
+						background:#88d164;
+					}
+				}
+				td{
+					width:33.3%;border-right: #ddd solid 1px;text-align: center;height:30px;color:#666;
+				}
+			}
+		}
+		.partake_tel{
+			height: 40px;line-height: 40px;
+			h3{
+				font-size: 18px;color:#c07b0e;background: url("../../images/dai_ico.png") 80px -47px no-repeat;@include inline-block;width: 130px;
+			}
+			position: absolute;bottom:114px;left:120px;
+			span{
+				font-size: 18px;color:#ea2e2f;@include inline-block;
+				em{
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+.jr_flow{
+	 background:#39d198;position: relative;z-index:8;padding-top: 60px;padding-bottom: 50px;
+	 .con{
+		width: 1100px;margin: 0 auto;height:888px;overflow: hidden; background: url("../../images/dai_bg1.png") no-repeat;position: relative;
+		h2{
+			width: 100%;text-align: center;line-height: 130px;font-size: 36px;color: #fff;
+		}
+		.step{
+			background: url("../../images/dai_step.png") 0 0 no-repeat;padding-top: 190px;width:860px;margin:0 auto;margin-top: 20px;
+			ul{
+				width:900px;@include inline-block;margin-left: 37px;
+				li{
+					float: left;margin-right:47px;
+					&.s1{
+						margin-left: 0px;
+					}
+					&.s2{
+						margin-left: 25px;
+					}
+					&.s3{
+						margin-left: 29px;
+					}
+					&.s4{
+						margin-left: 38px;
+					}
+					&.s5{
+						margin-left: 39px;
+					}
+					p{
+						font-size: 18px;color:#602c05;text-align:center;
+						&.tit{
+							color: #e4382c;
+						}
+					}
+				}
+			}
+		}
+		.info{
+			width:973px;background:#fff;@include inline-block;margin-left: 40px;margin-top: 30px;@include border-radius(10px);
+			padding:0 20px;padding-bottom:30px;
+			h3{
+				width: 100%;text-align: center;font-size: 36px;color: #f98702;padding-bottom:15px;border-bottom: #ffde8f solid 1px;
+				margin-top: 8px;margin-bottom: 40px;
+			}
+			.fl{
+				width: 53%;padding-left: 2%;
+			}
+			.fr{
+				width: 45%;
+			}
+			dl{
+				@include inline-block;width:100%;margin-bottom: 10px;
+				dt{
+					float: left;font-size: 16px;color:#444;width:80px;
+				}
+				dd{
+					float: left;font-size: 14px;color:#777;width:370px;margin-top: 2px;
+				}
+			}
+			p{
+				font-size: 14px;color:#444;text-align: center;
+				&.ps{
+					color:#6d4141;text-align: left;
+				}
+			}
+			.btn{
+				margin-left: 110px;margin-top: 20px;
+				a{
+					display: block;width:165px;text-align:center;color:#fff;background:#f67823;@include border-radius(25px);
+					border: 0;height:40px;line-height: 38px;font-size: 16px;
+					&:hover{
+						background: #de6e22;
+					}
+				}
+			}
+			ul{
+				@include inline-block;width:100%;
+				li{
+					float: left;margin-left: 20px;
+				}
+			}
+		}
+		
+	}
+}
+.fix_nav{z-index:99;}
+
+
+

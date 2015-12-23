@@ -1,0 +1,50 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+$hack_ie7:'+';				// IE7 HACK #{$hack_ie7}border:none;
+
+
+// COMPASS配置
+$browser-minimum-versions: ("ie": "6");
+
+// FONT相关
+// -----------------------------------------------------
+$baseFontSize:			13px !default;
+$baseLineHeight:		1.5 !default;
+$baseFontFamily:		tahoma, arial, \5b8b\4f53, sans-serif !default; // "Helvetica Neue", Helvetica, Tahoma, sans-serif !default;
+$fontYaHei:				"Microsoft Yahei";				//微软雅黑
+$fontHeiTi:				"SimHei";						//黑体
+$fontYH:				"Microsoft Yahei","SimHei";		//黑体
+
+
+// 基本颜色
+// color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacify($color, $amount)
+// mix($color1, $color2[, $amount])
+
+$color_placeholder:		#a3a3a3 !default;		// placeholder样式，文本色
+
+// WIDTH
+// -----------------------------------------------------
+
+$container_width:1000px;
+
+$color_orange:#f60;
+$color_orange1:#ff6458;
+$color_orange2:#ffaca7;
+$color_gray:#555555;
+$color_gray_2:#777777;
+$color_gray_1:#dadada;
+$color_blue:#0f80e3;
+$color_yellow:#fdfbec;
+$color_yellow_2:#f6d257;
+$color_border:#dddddd;
+$color_border_button:#DcDcDc;
+$color_orange_back:#d4270f;
+
+// link
+//-----------------------------------------------------
+$linkColor:             $color_blue $color_orange1 !default;        // 如果只有一个值则滑过的值为这个值的darken 5%，如果有两个值则第二个值为滑过的值
+$placeholder:           true #a3a3a3 !default;      // 变量分别为：是否输出表单的占位符placeholder样式，文本色
+//-----------------------------------------------------

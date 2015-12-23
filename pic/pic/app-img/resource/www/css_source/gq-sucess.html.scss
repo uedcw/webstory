@@ -1,0 +1,16 @@
+@import "you-detail.html.scss";
+.sucess{
+        width:500px;margin:20px auto;
+        div{width:500px;clear:both;display:inline-block;}
+        img{
+            display:inline-block; float:left;
+		}
+		span{
+            display:inline-block;float:left;margin-left:50px;
+			p{
+			   font-size:16px;color:$co-3;margin-top:22px;
+			   a{font-size:12px;margin-right:10px;}
+			}
+		}
+
+}

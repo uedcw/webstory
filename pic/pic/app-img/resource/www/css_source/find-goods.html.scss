@@ -1,0 +1,65 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "setting.scss", "mixin.scss";
+@import "compass", "reset.scss", "public.scss", "old_public.scss";
+
+       /*content*/
+    img{border: 0; }
+    .main_shop{font:14px/1.5 '微软雅黑',arial;}
+    .clear{clear:both}
+    .fl{float:left}
+    .fr{float:right}
+    .main_shop{height: auto; width: 100%}
+    .wrap-990{ width:990px; margin: 0 auto;}
+    .banner_shop{width:100%;background: image-url('banner1.jpg') center 0 no-repeat; height: 472px;}
+    .banner_shop form{ width: 402px; height: 402px; box-sizing: border-box;background: image-url('fbg.png') 0 0 no-repeat;
+        float: right;  color: #333; padding-top: 50px; padding-left: 25px;margin-top: 31px;}
+    .banner_shop form ul{margin: 0; padding: 0; list-style: none;padding-top: 15px;}
+    .banner_shop form li{ display: inline-block; width: 100%; margin-bottom: 10px; position: relative; z-index: 9}
+    .banner_shop form li.w375{width:375px;}
+    .banner_shop form li.marb{ margin-bottom: 5px;}
+    .banner_shop form li.z-index{ z-index: 99}
+    .banner_shop form span{ margin-left: 7px;}
+    .banner_shop form span.sco{position: absolute;right: 42px; top: 0; z-index: 99}
+    .banner_shop form label{  float: left; text-align: right; display: block; width: 60px; margin-top: 5px; margin-right: 3px;}
+    .banner_shop form label.w30{width:35px;}
+    .banner_shop form input{  font-family:'微软雅黑';padding-left: 5px;display:block; float: left;border:1px solid #f7db89;box-shadow:0 0 2px #f7db89; height: 32px; line-height: 30px;}
+    .banner_shop form textarea{ font-family:'微软雅黑'; padding-top:5px;padding-left: 5px;resize: none;border:1px solid #f7db89;
+        box-shadow:0 0 2px #f7db89; height: 135px;}
+    .banner_shop form button{ font-family:'微软雅黑';width:115px; height: 40px; display: block; background: #f57514; color: #fff; font-size: 24px;
+        border:0;border-radius: 5px 5px 5px; cursor:pointer; margin-left: 65px;}
+    .banner_shop form button:hover{ background: #f1812c}
+    /* select */
+    .select{position:relative;float:left;margin:0 2px;}
+    .select dt{ border:1px solid #f7db89;box-shadow:0 0 2px #f7db89;width:60px;height:30px;
+        background:#fff image-url('down.png') no-repeat 55px center;line-height:26px;
+        padding-left:8px;cursor:pointer;padding-right:12px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;position:relative;z-index:99;}
+	.ie7 .select dt{ height:32px;}
+    .select dt:hover,.select dt.cur{border:1px solid #f7db89;box-shadow:0 0 2px #f7db89;}
+    .select dd{position:absolute;left:0px;top:29px;border:1px solid #d2ccc4;background:#fff;display:none; margin: 0; padding: 0;
+        z-index: 9999;}
+    .select dd ul{width:80px;overflow:hidden; list-style: none; margin: 0; padding: 0;}
+    .select dd ul li{margin-bottom: 0px;}
+    .select dd ul li a{line-height:28px;display:block;text-decoration:none; color:#333; font-size: 14px;text-align: center;}
+    .select dd ul li a:hover{background:#f1f1f1;}
+    .top5{ margin-top: 5px;}
+    .w255{ width: 275px;}
+    .w75{ width: 75px;}
+    .w50{ width: 76px; padding-right: 20px;}
+	.ie7 .w50{ width: 48px; padding-right: 20px;}
+    .ps0{ color: #707070;}
+    .p20{ padding-top: 20px;}
+    .tb380{ width: 380px;margin-top: 40px; margin-bottom: 40px}
+    .tb380 h1{ margin: 0; padding: 0}
+    .tb380 ul{ margin: 0; padding: 0}
+    .tb380 ul li.tit{border: 0}
+    .tb380 ul li.tit span{line-height: 46px;font-size: 20px; color: #24abf4; font-weight: normal; border-bottom: #bfbfbf solid 1px; height: 46px; vertical-align: middle;}
+    .tb380 ul li{width:100%; float: left; padding: 12px 0px 12px 0px;border-bottom: #bfbfbf dotted 1px; list-style: none }
+    .tb380 ul li span{  color:#595959;display: inline-block; width: 76px; text-align: center;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;text-align: center;}
+    .tb380 ul li span.time{width: 110px;}
+    .tb500{ width: 500px;margin-top: 25px; margin-bottom: 40px}
+    .tb500 ul{margin: 0; padding: 0; list-style: none}
+    .tb500 ul li{ margin-top: 15px;}
+    #marquee-tb_1{overflow:hidden;height:460px;width:380px;margin-top: 10px;}
+    .co-1{ color: #f57514}
+    .pl{padding-left: 65px;}
+    .tb380 ul li span.title-name{ text-align:left;width:118px;}

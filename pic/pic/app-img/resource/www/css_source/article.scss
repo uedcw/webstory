@@ -1,0 +1,133 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "setting.scss", "mixin.scss";
+@import "compass", "reset.scss", "public.scss", "old_public.scss";
+
+.main_container{
+  font-family: Arial,Verdana,Sans-serif;
+  width: $container_width;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  .word_notice_nav{
+    height: 45px;
+    line-height: 45px;
+    span{
+      margin-left: 5px;
+      margin-right: 5px;
+      display: inline-block;
+      color: $color_blue;
+      font-size: 14px;
+     // font-family: "Serif";
+    }
+  }
+
+  .left_nav{
+    width:171px;
+    float:left;
+    border: 1px solid $color_border_button;
+    .new_on_the_road,.deal_advice,.insurance_consumer,.ordinary_problems,{
+      .header_1{
+        padding-top: 3px;
+        width: 171px;
+        border-bottom: 1px solid $color_border_button;
+        border-top: 1px solid $color_border_button;
+        height:30px;
+        line-height: 27px;
+        font-size: 16px;
+        background-color: #f0f0f0;
+        &.first{
+          border-top:0px;
+        }
+        img{
+          margin-left: 5px;
+        }
+        span{
+          position:relative;
+          left: 5px;
+          top:-4px;
+        }
+      }
+      ul{
+        padding-bottom: 10px;
+        background-color: #FFFFFF;
+      //  border:1px solid $color_border_button;
+        li{
+          margin: 1px 0px;
+          a{
+            height:31px;
+            display: block;
+            width: 171px;
+            line-height: 31px;
+           // font-family:"Serif";
+            font-size: 13px;
+            color: $color_gray;
+            background-color: #FFFFFF;
+            span{
+               margin-left: 20px;
+            }
+          }
+          a:hover{
+            background-color: #f1f9ff;
+          }
+          a.on{
+            background-color: $color_blue;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+  .go_back{
+    margin-left: 700px;
+    margin-top: 10px;
+    //position: absolute;
+   //bottom: 10px;
+    //right: 30px;
+  }
+  .right_notice{
+   position: relative;
+   width: 815px;
+   padding-top: 5px;
+   padding-bottom: 40px;
+   //height:784px;
+   float: right;
+   background-color: #FFFFFF;
+    border: 1px solid $color_border_button;
+    h1{
+     @include heights(70);
+     text-align: center;
+    }
+    hr{
+       list-style: none;
+       width:718px;
+       border:1px dashed $color_border_button ;
+       margin:0px;
+       padding: 0px;
+    }
+    .text_content{
+      padding-bottom: 3px;
+      padding-top: 40px;
+      width:717px;
+      border-top:1px solid $color_border_button;
+      margin-left:49px;
+      color:#555;
+      img{
+        max-width: 710px;
+      }
+      .content_part{
+        font-size: 14px;
+        margin-bottom: 10px;
+        p{
+          @include heights(25);
+        }
+        span{
+          @include heights(25);
+          margin-left:20px;
+        }
+      }
+    }
+  }
+
+  .clear{
+    clear: both;
+  }
+}

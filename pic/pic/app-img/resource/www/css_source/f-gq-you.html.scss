@@ -1,0 +1,69 @@
+@import "you-detail.html.scss";
+.tab{
+    width:100%;margin: 30px auto;border-bottom: 1px solid #ddd;
+	li{
+	    display: inline-block;
+		a{
+		   color: #111; font-size: 18px; text-align: center;display: inline-block;width: 200px;height: 40px;line-height: 37px;background: none repeat scroll 0 0 #f5f5f5;
+		   &.cur{ background: #0f80e3; color: #fff;}
+		}
+	}
+}
+.ie7 .tab li{float:left;}
+
+
+.form-info{
+           clear: both;
+		   h3{height: 30px;line-height: 30px;color: #000;font-size: 14px;text-indent: 10px;background: #F0F0F0;margin-top: 15px;margin-bottom: 15px;width: 100%;}
+		   ul{display: inline-block;width: 100%;overflow:hidden;
+				li{
+		       margin-bottom: 10px;width: 100%; display: block;height: auto;float:left;
+			   label{
+			         display:inline-block;width: 92px; text-align: right; height: 30px; line-height: 28px;float: left;
+					 em{color: #ff0000}
+			   }
+			   div{
+			       display:inline-block;float: left;
+				   input{
+				        width:100%;color:$co-3;
+						&.w70{width:70px}
+						&.txt{
+						border: 0;
+						&:hover{border: 0;box-shadow:none;}
+						&:focus{border: 0;box-shadow:none;}
+						}
+				   }
+				   span{
+				        width:100%;margin:5px 0px 0px 0px;
+
+
+				   }
+				   &.w{width:128px}
+			   }
+			   input,select{ display:inline-block;height: 30px; line-height: 30px; }
+			   textarea{
+			   color: #999;  resize: none;display: block;
+			   &.error{border:#ff0000 solid 1px;}
+
+			   }
+			   button{display: block;width: 150px;height: 42px;border: 0px none;border-radius: 5px;margin: 0px auto;font-size: 20px;color: #FFF;cursor: pointer;}
+			   &.li0{
+					padding-left:92px;
+					 span{
+			              display: block;float: left;margin-left: 5px; color: #666;
+			         }
+					 label{
+					      width: 220px;line-height: 17px;
+					 }
+					 input{
+					      width: 13px; line-height: 13px; height: 13px;margin-top: 1px; float: left
+					 }
+			   }
+			   &.li1{
+					span{margin:5px 5px 0px 92px;}
+			   }
+			   &.mb0{margin-bottom: 0}
+		   }
+		   }
+
+}

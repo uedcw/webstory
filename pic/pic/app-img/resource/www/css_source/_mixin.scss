@@ -1,0 +1,38 @@
+@charset "UTF-8";				// [中文 UTF-8]
+//-----------------------------------------------------
+// mixin scss
+// 包括常用的mixin，%及@function
+// mixin，通过@include调用，样式通过拷贝的方式使用，尤其适用于传递参数
+// %，通过@extend调用，样式通过组合申明的方式使用，适用于不传参数的代码片段
+// @function，返回一个值，用于调用
+//-----------------------------------------------------
+
+// 背景图片
+@mixin img_bg($img, $x:0, $y:0, $repeat:no-repeat, $bgcolor:0){
+    @if $bgcolor != 0 {
+        background: image-url(#{$img}) $bgcolor $repeat $x $y;
+    } @else {
+        background: image-url(#{$img}) $repeat $x $y;
+    }
+}
+
+// 高度及行高
+@mixin heights($h, $lh:''){
+	@if $lh == '' { $lh:$h; }
+	height:#{$h}px;
+	line-height:#{$lh}px;
+}
+
+// 圆角
+@mixin rounded($vert, $horz, $radius: 4px) {
+	border-#{$vert}-#{$horz}-radius: $radius;
+	-moz-border-radius-#{$vert}#{$horz}: $radius;
+	-webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+// 全圆角
+@mixin rounded_all($radius: 4px) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}

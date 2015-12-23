@@ -1,0 +1,15 @@
+@charset "UTF-8";				// [中文 UTF-8]
+$lte7:true !default;//是否兼容ie6,7
+
+// inline-block
+// ie6-7 *display: inline;*zoom:1;
+@mixin inline-block {
+  display: inline-block;
+  @if $lte7 {
+    *display: inline;*zoom:1;
+  }
+}
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}

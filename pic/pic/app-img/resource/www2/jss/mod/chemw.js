@@ -1,0 +1,1 @@
+define(["store","chemwriter"],function(e,t){return t.clear_molfile=function(t){t=t||"molfile",e.remove(t)},t.save_molfile=function(t){t&&t.length>0&&(t=t.replace(/\r?\n/g,"|")),e.set("molfile",t)},t.load_molfile=function(t){t=t||"molfile";var n,r=document.getElementById(t);return r&&r.value.length>0?n=r.value:n=e.get("molfile"),n&&n.length>0&&(n=n.replace(/\|/g,"\n")),n},t});

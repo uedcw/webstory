@@ -1,0 +1,37 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+@import "setting.scss", "mixin.scss";
+@import "compass", "reset.scss", "public.scss";
+@import "old_public.scss";
+
+/*404errot*/
+
+.error-502{
+	width:100%;
+	height:auto;
+	box-sizing:border-box;
+	position:relative;
+	padding-top:42px;
+	margin-bottom: 50px;
+	.con{
+		padding: 10px 0px 40px 0px;
+		ul{display: inline-block;
+				li{
+					text-align:center;
+					margin-bottom:20px;float: left;
+					img{margin-right: 80px;}
+					h2{color: #111;font-size: 24px;margin-bottom: 0px;margin-top: 0px;text-align: left;}
+					p{ color: #777;font-size: 14px;text-align: left;margin-bottom: 30px;
+						em{ color: #0f80e3;}
+						a{
+							&.btn0-bg{display: block;height: 36px;line-height: 36px;text-align: center;color: #fff;font-size: 16px;margin-top: 60px;width: 335px;
+							i{background:  image-url('refresh.png') no-repeat;display: block;width: 25px;height: 25px;float: left;margin-left: 48px;margin-top: 5px;margin-right: 5px;}
+							span{float: left;}
+							}
+						}
+						&.fz12{font-size: 12px;margin-top: -25px;}
+					}
+				}
+			}
+		}
+	}

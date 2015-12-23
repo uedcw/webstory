@@ -1,0 +1,147 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss";
+body{background:#f8f8f8;}
+input[type="password"]{border: 1px solid #ddd;background:#fff;padding-left:5px;font-family:'Microsoft YaHei',Arial;}   
+input[type="password"]{
+	&:hover{
+	       box-shadow: 0 0 5px   rgba(15, 128, 227, 0.5);
+	}
+	&:focus{
+	       box-shadow: 0 0 5px   rgba(15, 128, 227, 0.5);
+    }
+}
+input[type="password"].error{
+           border:#ff0000 solid 1px;
+     &:hover{
+	       box-shadow:none;
+	 }
+	  &:focus{
+	       box-shadow:none;
+	 }
+}
+.wrap{width:1000px;}
+.reg_head{
+	width:100%;padding:25px 0px 5px 0px ;float: left;background:#f2f2f2;
+	.logo{
+		float: left;
+		.logo_img{
+			background: url('../../images/ico_login.png') no-repeat;width:165px;height: 65px;float:left;
+			display: block;
+		}
+		span{
+			float: left;display:block;height:24px;color:#444;font-size: 22px;margin-top: 5px;
+			&.line{
+				width: 2px;border-right: #ccc solid 1px;margin: 11px 12px 0px 0px;
+			}
+		}
+	}
+	.tel{
+		float: right;margin-top: 5px;
+		span{
+			font-size: 16px;color:#444;
+		}
+		em{
+			font-size: 18px;color:#ff1e00;
+			&.time{
+				font-size: 12px;color:#444;margin-left: 3px;
+			}
+		}
+	}
+}
+.reg_form{
+	@include inline-block;width:100%;background:#fff;padding:70px 0px;
+	.fl{width:700px;}
+	.fr{width:235px;padding-left:30px;border-left: #ddd solid 1px;}
+	.tab{
+		@include inline-block;width:100%;border-bottom: #ddd solid 1px;margin-bottom: 40px;
+		ul{
+			@include inline-block;margin-left: 180px;float: left;margin-bottom: -1px;
+			li{
+				float: left;background:#f7f7f7;margin-right: 5px;border: #ddd solid 1px;width:50%;height:30px;font-size: 16px;
+				width:130px;line-height: 30px;text-align: center;cursor: pointer;
+				&.cur{
+					background:#fff;border-bottom: 0;height: 31px;color:#317ee7;
+				}
+				&:hover{
+					background:#fff;border-bottom: 0;height: 31px;color:#317ee7;
+				}
+			}
+		}
+		span{
+			float: right;font-size: 14px;margin-top: 5px;margin-right: 100px;
+		}
+	}
+	.form{
+		width: 650px;margin:0px auto;border-right: #ddd solid 1px;
+		ul{
+			@include inline-block;width:100%;position: relative;z-index: 9;
+			li{
+				@include inline-block;width:140%;margin-bottom: 15px;
+				label{
+					display: inline-block;height:30px;line-height: 30px;font-size: 14px;width:90px;text-align: right;
+					float: left;
+					em{color:#ff3232;margin-right: 5px;}
+					&.read{
+						width: auto;height:auto;text-align: left;font-size: 12px;color:#b4bbc2;margin-left: 95px;
+						input{
+							width: auto;height:auto;margin-right: 5px;margin-top: -3px;float:none;							
+						}
+					}
+				}
+				span{
+					&.error{width: auto;float: left;height: 32px;line-height: 32px;margin-left: 5px;padding:0 10px;}
+				}
+				input{
+					height:30px;line-height: 30px;font-size: 14px;width:285px;float: left;padding-right: 30px;
+					&.w110{
+						width: 110px;
+					}
+					&.error{
+						background: url('../../images/ico_login.png') -50px -386px no-repeat;
+					}
+					&.correct{
+						background: url('../../images/ico_login.png') -50px -345px no-repeat;
+					}
+				}
+				.btn04{
+					height: 42px;line-height:42px;font-size: 18px;color:#fff;text-align:center;border: 0;display:block;width:150px;
+					margin-left: 95px;margin-top: 10px;
+				}
+				.getmail{
+					display: inline-block;background:#f7f7f7;height:32px;line-height: 32px;border: #ddd solid 1px;color:#555;text-align: center;
+					width: 120px;margin-left: 5px;float: left;
+					&:hover{
+						background:#e7e6e6;
+					}
+				}
+			}
+		}
+	}
+	.reg-ps{
+		text-align: center;width:235px;padding-left:30px;
+		i{
+			width: 175px;height:168px;background: url('../../images/ico_login.png') 0px -67px no-repeat;
+			display:block;margin-top: 2px;margin:0 auto;margin-bottom: 10px;position: relative;z-index: 8;
+		}
+		p{
+			font-size: 14px;position: relative;z-index: 8;
+			&.tel{
+				font-size: 24px;color:#ff1e00;margin-top: 10px;
+			}
+		}
+		.gologin{
+			background:#fff;height:40px;line-height: 40px;border: #ddd solid 1px;text-align: center;display:block;
+			width: 130px;@include border-radius(5px);padding:1px;font-size: 18px;color:#555;position: relative;z-index: 10;
+			margin:20px auto;
+			&:hover{
+				border: 0;padding:2px;background:#317ee7;color:#fff;
+			}
+		}
+	}
+}
+.reg_foot{
+	background:#f8f8f8;width:100%;border-top: #ddd solid 1px;padding-bottom: 50px;
+}

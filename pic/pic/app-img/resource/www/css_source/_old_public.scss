@@ -1,0 +1,701 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+.g-fl{float:left;}
+.g-c7{color:#777;}
+.g-ca{color:#08c;}
+.g-zh{word-break:break-all;word-wrap:break-word;}
+.g-lhzh{line-height:22px;word-break:break-all;word-wrap:break-word;}
+.g-mp0{margin:0;padding:0;}
+
+input.placeholder_def{color:#a3a3a3;}
+input.placeholder_foc{color:#000;}
+
+.n-border {border: none;}
+.no-gap{border-collapse:collapse;border:none;}
+.ellipsis{text-overflow:ellipsis; white-space:nowrap; overflow:hidden; vertical-align: top;}
+
+input[type="text"]{
+  border: 1px solid $color_border;
+  padding-left: 5px;
+  color: #2f2f2f;
+}
+textarea{
+  padding-top: 5px;
+  padding-left: 5px;
+  color: #2f2f2f;
+  font-size: 14px;
+}
+.button{
+  padding: 3px 10px;
+  display:inline-block;
+  margin-left: 5px;
+  background-color:#0f80e3;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  &:hover{
+    background-color:#0068c4;
+  }
+}
+
+
+// ----------------------------------------- START ---------------------------------------------------
+
+.module-header-1{ //th背景
+  padding-left: 10px;
+  color: $color_gray;
+  font-size: 16px;
+  @include heights(34);
+  background-color: #f5f5f5;
+  border-bottom:2px solid #0f80e3;
+}
+.module-herder-2{
+  padding-top: 6px;
+  background-color: #f0f0f0;
+  border-bottom:1px solid $color_border;
+  height: 34px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 200;
+  color:#1b1b1b;
+}
+.module-herder-3{
+  @extend .module-herder-2;
+  border-top: 2px solid #0f80e3;
+}
+.img_serch{ //放大镜
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top:3px;
+  @include img_bg('zoom.png',0,0);
+}
+
+.ser_but {
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 0px 0px 10px;
+  display: inline-block;
+  height: 27px;
+  @include img_bg('small_zoom.png', 14px, 7px, no-repeat #0f80e3);
+  color: #FFF;
+  width: 40px;
+  position: relative;
+  top: 11px;
+  border:none;
+  &:hover{
+    background-color: #0068c4
+  }
+}
+.product_more{
+  color: $color_gray;
+  font-size: 13px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  &:hover{
+    color: $color_orange1;
+  }
+}
+/**********************分页***************************/
+.mall_page_form{
+  margin-right: 15px;
+  margin-top: 15px;
+  text-align: center;
+  height: 30px;
+}
+.mall_page{
+  display: inline-block;
+  #{$hack_ie7}display:inline;
+  #{$hack_ie7}zoom:1;
+  li{
+    float: left;
+    margin-right: 5px;
+    a,span{
+      color: $color_gray;
+      text-align: center;
+      border: 1px solid $color_border;
+      @include rounded_all(1px);
+      display: block;
+      padding: 3px 0px;
+      width: 30px;
+      &.cur{
+        border: 1px solid #0f80e3;
+        background-color:#0f80e3;
+        color: #FFF;
+      }
+    }
+    a.middle,span.middle{ width:55px; }
+    a.big,span.big{ width:75px; }
+    a:hover{
+      background-color:#0f80e3;
+      color: #FFF;
+    }
+  }
+}
+
+
+.guide_but{
+  margin-top: 5px;
+  border:1px solid #0d7ada;
+  float: right;
+  padding:6px 0px 3px 28px;
+  @include rounded_all(4px);
+  width: 80px;
+  @include img_bg('guide.png', 5px, 6px);
+  background-color: #2a94f0;
+  height: 23px;
+  color: #FFFFFF;
+  font-size: 14px;
+  &:hover{ color: #FFFFFF;}
+}
+
+.main_container {
+
+  width: $container_width;
+  margin: 0px auto;
+  .nav{
+    margin-top: 10px;
+    height: 35px;
+    @include img_bg('nav_icon.png',2px,0px);
+    ul {
+      padding-top: 2px;
+      float: left;
+      padding-left: 20px;
+      li {
+        margin-right: 5px;
+        float: left;
+        a{
+          color:$color_gray;
+        }
+        a:hover{
+          color:$color_orange1;
+          cursor:default;
+        }
+        a.index_page {
+          font-size: 13px !important;
+          color: $color_gray !important;
+        }
+        a.index_page:hover {
+          font-size: 13px !important;
+          color:#ff6458 !important;
+          cursor: pointer !important;
+        }
+      }
+    }
+    .notice_in{
+      float: right;
+      .main_word{
+        color: $color_orange1;
+      }
+    }
+  }
+}
+
+/**********************购物页面***********************/
+.product_price{
+  color: $color_orange1;
+  font-size: 19px;
+}
+dl.item_buy_in{
+  margin-top: 15px;
+  dd{
+    font-size: 13px;
+    color: $color_gray;
+    padding: 6px;
+    &.price_form{
+      height: 25px;
+      margin-top:-10px;
+    }
+    label{
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+      color: #666666;
+      font-size: 12px;
+      &.small{
+        width: 60px;
+      }
+      &.left{
+        float: left;
+      }
+    }
+
+    &.num_form{
+      clear: both;
+    }
+    .do_num,.do_dialog_num{
+      padding: inherit;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0px;
+      text-align: center;
+      color: $color_gray;
+      display: inline-block;
+      border: 1px solid #dddddd;
+      background-color: #eeeeee;
+      width: 29px;
+      height: 29px;
+
+    }
+    .buy_num{
+      height: 31px;
+      border: none;
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
+      border-left: none;
+      border-right: none;
+      width:42px;
+      text-align: center;
+      font-size:18px;
+      position: relative;
+      top:-2px;
+      #{$hack_ie7}position: relative;
+      #{$hack_ie7}top: -5px;
+    }
+    p{ display: block; padding-left: 98px; margin-top: 10px;}
+  }
+}
+.purity_form{
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+.option_form{
+  float: left;
+  width: 255px;
+
+  a.option_sel{
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    min-width: 45px;
+    padding:5px 5px 1px 5px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    color: $color_gray;
+    height: 25px;
+    &.big{
+      width: 100px;
+    }
+    &.middle{
+      width: 100px;
+    }
+    &.on{
+      color: #ff6458;
+      padding:4px 4px 0px 4px;
+      border: 2px solid #ff6458;
+    }
+  }
+}
+.standard_form{
+  margin-top: -5px;
+  display: block;
+  padding: 15px 0px;
+  &.box{
+    padding: 8px 0px;
+  }
+  label{float: left;}
+  .standard{
+    float: left;
+    b{
+      font-weight: 200;
+    }
+    width: 255px;
+    &.middle{
+        width: 240px;
+    }
+    padding: 5px 8px;
+    background-color: #f7f7f7;
+    color:$color_gray;
+    font-size: 13px;
+    li {
+      cursor: pointer;
+      padding-left: 5px;
+      margin-top: 5px;
+      &.title {
+        margin-top: 0px;
+        border-bottom: 1px solid #dddddd;
+      }
+      &.on {
+        background-color: $color_orange1;
+        color: #FFF;
+      }
+      &.not{
+	cursor: default;
+        background-color:#AAAAAA;
+        color: #FFF;
+      }
+    }
+    span{
+      display: inline-block;
+      width: 46%;
+    }
+  }
+}
+/******************排序字段*********************/
+  .option_label{
+    position: relative;
+  }
+  a.option_link{
+    font-size: 13px;
+    color: $color_gray;
+    margin-left: 15px;
+    line-height: 30px;
+  }
+  .option_but{
+    @include heights(23);
+    font-size: 13px;
+    min-width: 50px;
+    @extend .button;
+    margin-left:15px;
+    .sort_icon{
+      display: inline-block;
+      width: 7px;
+      height: 12px;
+      margin-left: 4px;
+    }
+    .sort_icon.up{
+      @include img_bg('sort_icon.png',0px,0px);
+    }
+    .sort_icon.down{
+      @include img_bg('sort_icon.png',-7px,0px);
+    }
+  }
+  a.option_but:hover{color:#FFF;}
+
+.black_btn{
+  background-color: #555 !important;
+  &:hover{
+    cursor: crosshair !important;
+  }
+}
+.black_overlay{
+  display: none;
+  position: fixed;
+  #{$hack_ie7}position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:5001;
+  -moz-opacity: 0.6;
+  opacity:.60;
+  filter: alpha(opacity=60);
+}
+.handle_box_form{
+  display: none;
+  position: fixed;
+  #{$hack_ie7}position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 0px;
+  z-index:5002;
+}
+
+.close_box{
+  display: block;
+  width:15px;
+  height: 15px;
+  float: right;
+  margin-right: 13px;
+  margin-top: 10px;
+  @include img_bg('close_but.png',0px,0px);
+  &:hover{
+    @include img_bg('close_but.png',-15px,0px);
+  }
+  &.no_title{
+    position: relative;
+    top:-8px;
+  }
+}
+.handle_box{
+  display: none;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0,0,0,0.15);
+  position: relative;
+  z-index:5003;
+  border:1px solid #ccc;
+  width:600px;
+  &.box_show{
+    display: block;
+  }
+  &.box_hidden{
+    display: hidden;
+  }
+  &.alert_box{
+    display: none;
+    width:490px;
+    position: relative;
+  }
+  margin: 50px auto;
+  background-color: #FFF;
+  h1{
+    @extend .module-header-1;
+    padding-top: 5px;
+    height: 40px;
+    span{
+      font-size: 16px;
+      float: left;
+    }
+    .number{
+      font-size: 14px;
+      color: $color_orange1;
+    }
+  }
+  .box_content{
+    padding-top: 10px;
+    .cart_img_form{
+      float: left;
+      display: table;
+      table-layout: fixed;
+      border: 1px solid $color_border;
+      width: 180px;
+      height: 180px;
+      margin-left: 20px;
+      position: relative;
+      .img_link{
+        #{$hack_ie7}position:absolute;
+        #{$hack_ie7}top:50%;
+        #{$hack_ie7}width:100%;
+        #{$hack_ie7}text-align:center;
+        #{$hack_ie7}height:auto;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        img {
+          #{$hack_ie7}position:relative;
+          #{$hack_ie7}top:-50%;
+          vertical-align:middle;
+          #{$hack_ie7}zoom:1;
+          display: inline-block;
+          max-height: 180px;
+          max-width: 178px;
+        }
+      }
+    }
+  }
+
+  .box_footer{
+    border-top:1px solid $color_border;
+    margin-top: 10px;
+    height: 58px;
+    padding-top: 9px;
+    text-align: center;
+    background-color: #f7f7f7;
+    .sub_buy{
+      @extend .button;
+      font-size: 16px;
+      width: 140px;
+      height: 40px;
+      @include rounded_all(3px);
+      &.disable{ background-color: #bbbaba}
+      &.disable:hover{
+        background-color: #bbbaba
+      }
+    }
+    .ok{
+      @extend .button;
+      font-size: 16px;
+      width: 120px;
+      height: 40px;
+      @include rounded_all(3px);
+    }
+  }
+  .product_main_in{
+    padding: 6px 10px;
+    background: $color_yellow;
+    border:1px $color_yellow_2 solid;
+    .product_name{
+      display: block;
+      font-size: 14px;
+      color: $color_gray;
+      word-break:break-all;
+      word-wrap:break-word;
+    }
+    label{
+      margin-left: 10px;
+      &.first{
+        margin-left: 0px;
+      }
+    }
+    span{
+      color: $color_gray;
+      font-size: 13px;
+    }
+  }
+  /***************alert提示框*******************/
+  .alert_content{
+    height: 140px;
+    padding-left: 60px;
+    .alert_icon{
+      float: left;
+      margin-top: 40px;
+      width:50px;
+      height: 50px;
+      &.notice{
+        @include img_bg('dialog_icon.png',0px, 0px);
+      }
+      &.error{
+        @include img_bg('dialog_icon.png',-57px, 0px);
+      }
+      &.success{
+        @include img_bg('dialog_icon.png',-108px, 0px);
+      }
+    }
+    .alert_message{
+      margin-left: 20px;
+      float: left;
+      width: 300px;
+      font-size: 15px;
+      margin-top: 45px;
+      word-break:break-all;
+      word-wrap:break-word;
+    }
+  }
+}
+.go_top{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  @include img_bg('go_top.png',12px,18px,no-repeat,#65b2f4);
+  width: 60px;
+  height:60px;
+  @include rounded_all(3px);
+  &:hover{
+    background-color: #0f80e3;
+  }
+}
+
+
+/*************弹出框loading****************/
+#dialog_load{
+  height: 130px;
+  .load_notice{
+    width: 130px;
+    height:40px;
+    margin:60px auto;
+    padding-left: 40px;
+    padding-top: 6px;
+    font-size: 15px;
+    @include img_bg('mall_loading.gif',0px,0px);
+  }
+
+}
+.add_product_in{
+    float: left;
+    width: 360px;
+    margin-left: 20px;
+    .box_buy{
+      margin-top: 15px;
+      font-size: 13px;
+      dd{
+        @include heights(30);
+      }
+      label{
+        color: $color_gray;
+        font-size: 12px;
+        display: inline-block;
+        width: 65px;
+        text-align: right;
+      }
+      .buy_text{
+        width:55px;
+        border: 1px solid $color_border;
+        height: 23px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .product_price{
+        font-size: 15px;
+        font-weight: bold;
+        color: $color_orange1;
+      }
+    }
+  }
+  
+   .buy_product_in {
+    padding: 6px 10px;
+    background: $color_yellow;
+    border: 1px $color_yellow_2 solid;
+    margin:10px 20px;
+    ul{
+      li{
+        color: $color_gray;
+        @include heights(26);
+
+        label{
+          color: #000;
+          text-align: right;
+          display: inline-block;
+          width: 80px;
+        }
+      }
+    }
+  }
+  .quote_desc{
+    margin:3px 20px;
+    h2{
+      font-size: 15px;
+    }
+    textarea{
+      width: 100%;
+      height: 130px;
+      border: 1px solid $color_border;
+      resize: none;
+      margin-top: 6px;
+      font-size: 13px;
+    }
+  }
+
+/*****************************Form表单提示**********************************/
+  .input_form {
+    margin-bottom:10px;
+    label{
+      display: inline-block;
+      width: 120px;
+      text-align: right;
+      font-size: 13px;
+      color: $color_gray;
+    }
+    .input {
+        color: $color_gray;
+        font-size: 14px;
+        border: 1px solid #dddddd;
+        height: 25px;
+        width: 400px;
+        &.select{
+          min-width: 120px;
+          margin-right:5px;
+          width: auto;
+        }
+        &.error{
+          border: 2px solid $color_orange1;
+        }
+        &.pay_mark{
+          height: 65px;
+          resize: vertical;
+        }
+      }
+      .error_mess{
+        color: #F00000;
+        font-size: 12x;
+      }
+      .must_write{
+        font-size: 15px;
+        font-weight: bold;
+        color: #F00000;
+      }
+    }
+.black_btn{
+  background-color: #bbb !important;
+  &:hover{
+    cursor: crosshair !important;
+  }
+}

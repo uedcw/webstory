@@ -1,0 +1,87 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+@import "setting.scss", "mixin.scss";
+@import "compass", "reset.scss", "public.scss";
+@import "old_public.scss";
+
+
+/*供求信息*/
+.gq-ico{ background: image-url('gqico.png') no-repeat;}
+.gq{display:inline-block;width:100%;margin-bottom:40px;}
+.gq .left{width:74%;float: left; border: #e6e6e6 solid 1px; background: #fff;box-sizing: border-box;}
+
+/*tab切换*/
+.gq .left ul.tab{background: #f8f9fa; display: block;width: 100%; height: 45px;border-bottom: #e6e6e6 solid 1px; }
+.gq .left ul.tab li{float: left;}
+.gq .left ul.tab li a{ display: block;padding: 10px 50px 10px 50px; color: #111; font-size: 18px; height: 25px;}
+.gq .left ul.tab li a em{font-size: 14px; color: #aaa;}
+.gq .left ul.tab li a.cur{border-top:#0f80e3 solid 3px;padding: 8px 50px 10px 50px; background: #fff; border-right: #e6e6e6 solid 1px;border-left: #e6e6e6 solid 1px;}
+.gq .left ul.tab li a.a0{border-left:0;}
+.gq .left ul.tab li a.cur em{color: #ff6458}
+
+/*筛选条件*/
+.gq .left .so{width:96%; background: #f8f9fa; margin: 10px auto;  box-sizing: border-box; padding:6px 10px 6px 10px; overflow: hidden;}
+.gq .left .so a{ font-size: 14px;color: #333; display: inline-block; padding-right: 10px;height: 28px; line-height: 28px; text-align: center; padding-left: 10px;float: left;}
+.gq .left .so a:hover{color:$co-blue;}
+.gq .left .so a.cur{ background: #0f80e3; color: #fff; }
+.gq .left .so a span{display: inline-block;float: left;}
+.gq .left .so a i{background-position: 0 -32px; width: 10px; height: 12px;  display: inline-block;margin-left: 5px; float: left;margin-top: 9px;}
+.gq .left .so a.cur i{background-position: 0 -18px;}
+.gq .left .so a.cur i.down{background-position: -13px 0px;}
+.gq .left .so .search{float: right;border: #e6e6e6 solid 1px; height: 28px;width: 221px; }
+.ie7 .gq .left .so .search{float: right;border: #e6e6e6 solid 1px; height: 26px;width: 224px; }
+.gq .left .so .search input{ border: 0;width: 190px;height: 26px; line-height: 26px; display: inline-block;padding-left: 5px; color: #999999; float: left}
+.gq .left .so .search button{border: 0;display: inline-block;width: 29px;height: 26px;float: left; background: #dddddd; cursor: pointer}
+.gq .left .so .search button i{display: block;background:  image-url('h-ico.png') no-repeat 0 -145px; width: 20px; height: 23px; margin: 0 auto}
+/*供求列表*/
+
+.gq .left .list{width: 100%; margin: 0 auto;}
+.gq .left .list dl{width:100%; padding:0px 15px 0px 15px; box-sizing: border-box;float:left;}
+.gq .left .list dl:hover{ padding: 0px 12px 0px 12px;border: #ff6458 solid 3px;}
+.gq .left .list dl:hover dt,.gq .left .list dl:hover dd{border: 0; padding-bottom: 13px;padding-top: 12px; }
+.gq .left .list dl dt{float: left; width: 56%;padding-right: 2%;height: 65px; border-bottom: #dddddd solid 1px;padding-bottom: 15px;padding-top: 15px;}
+.ie7 .gq .left .list dl {width: 96%;}
+.gq .left .list dl dt li{margin-bottom: 8px;}
+.gq .left .list dl dt li.tit{font-size: 14px; height:42px; overflow: hidden;word-break: break-all;}
+.gq .left .list dl dt li em{color: #999}
+.gq .left .list dl dt li span{color: #333;}
+.gq .left .list dl dt li span.now{ color: #999;}
+.gq .left .list dl dt li.company .ab{position: relative;}
+.gq .left .list dl dt li.company .info{position: absolute;top: 0px; left: 0px;float:left;background: #fff; width: 320px; height: 120px; display: none; cursor: default; z-index: 9999;}
+.gq .left .list dl dt li.company:hover .info{display: inline-block;}
+.gq .left .list dl dt li.company .info .bg-bom{ background: #e5e5e5; width: 320px; height: 120px;}
+.gq .left .list dl dt li.company .info .bg-top{border: #eeeeee solid 1px;background: #fff; position: absolute;top: -4px;left:-4px; width: 320px; height: 119px; box-sizing: border-box;}
+.gq .left .list dl dt li.company .info .bg-top .l{ float: left; background: #f8f9fa; padding: 15px 15px 12px 15px; color: #333; text-align: center;}
+.gq .left .list dl dt li.company .info .bg-top .l img{height: 68px; width: 68px;}
+.gq .left .list dl dt li.company .info .bg-top .r{width:190px;padding: 15px;display: inline-block;}
+.gq .left .list dl dt li.company .info .bg-top .r p{color: #999; margin-bottom: 3px; }
+.gq .left .list dl dt li.company .info .bg-top .r h2{ color: #0066cc;white-space:nowrap; text-overflow:ellipsis;}
+.gq .left .list dl dt li.company span.name{color: #777; float: left;}
+.gq .left .list dl dt li.company i{ display: block;background-position: 0 -103px; width: 7px; height: 4px; float: left; margin-top: 6px; margin-left: 6px;}
+.gq .left .list dl dd{float: left; width: 14%;text-align: center;height: 65px; border-bottom: #dddddd solid 1px; padding-bottom: 15px;padding-top: 15px;}
+.gq .left .list dl dd p{color: #999;margin-bottom: 5px; }
+.gq .left .list dl dd p.num{ color: #ff6458; font-size: 16px;}
+.gq .left .list dl dd p.time{color:#333;}
+.gq .left .list dl dd p.price{color: #333;margin-bottom: 14px;}
+.gq .left .list dl dd p.no-price{color: #ccc;margin-bottom: 14px;}
+.gq .left .list dl dd p.price em{color: #f44a52}
+.gq .left .list dl dd p a{padding: 6px 15px 6px 15px; color:#fff;}
+/*右侧快速发布需求*/
+
+.gq .right{width:24%;float: right;  box-sizing: border-box;}
+.gq .right .release{ border: #dddddd solid 1px;padding-bottom: 8px; box-sizing: border-box;background: #fff;}
+.gq .right .release .tit{width: 100%; position: relative; }
+.gq .right .release .tit h2{line-height: 26px;position: absolute;top: 13px;left: 0;display: block;width: 100%;text-align: center;color: #fff; font-size: 20px;font-weight: bold}
+.gq .right .release .tit img{width:100%;}
+.gq .right .release .des{width: 95%;margin: 10px auto; }
+.gq .right .release .des p{ text-align: center; color: #777;margin-bottom: 10px; width: 100%;}
+.gq .right .release .des p a{display: block; width:90%;height: 38px;  margin: 0 auto;text-align: center; line-height: 38px; color: #fff; font-size: 16px; border-radius: 5px;}
+/*右侧成交动态*/
+.ie7 .gq .right .state{height:867px}
+.gq .right .state{ border: #dddddd solid 1px;padding-bottom: 8px; box-sizing: border-box;margin-top: 10px;background: #fff; padding-bottom: 30px;height:900px;overflow:hidden}
+.gq .right .state h2{display: block;height: 30px; line-height: 30px; color: #333; border-bottom: #ddd solid 1px; font-size: 16px; background: #f5f5f5; text-indent: 10px;z-index: 9;position: relative;}
+.gq .right .state ul{width: 93%;margin: 0px auto;}
+.gq .right .state ul li{ border-bottom: #cccccc dotted 1px;padding-bottom: 10px;padding-top: 10px;}
+.gq .right .state ul li span{ color: #999; margin-right: 5px;}
+.gq .right .state ul li span.sp0{ color: #333;}
+.gq .right .state ul li span.sp1{ color: #0f80e3;}

@@ -1,0 +1,604 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss";
+/* c-default-index.css */
+
+/*轮播*/
+.middle .banner{width:608px;height:340px;overflow:hidden;position:relative;
+ &:hover{
+	.preNext{display: block;}
+ }
+}
+.middle .banner ul{height:340px;position:absolute;}
+.middle .banner ul li{float:left;width:608px;height:340px;overflow:hidden;position:relative;}
+.middle .banner ul li div{position:absolute;overflow:hidden;}
+.middle .banner .btn{position: absolute;bottom: 10px;left: 50%;z-index: 100;margin-left: -32px;}
+.middle .banner .btn span{display:inline-block;_display:inline;_zoom:1;font-size: 12px;width: 18px;height: 18px;line-height: 16px;cursor:pointer;
+float: left;margin-left: 5px;display: inline;text-align: center;background: #000;border-radius:50px;color: #fff;}
+.middle .banner .btn span.on{background:#ff8c1d;}
+.middle .banner .preNext{ @include opacity(50);border-radius: 2px;width: 36px;height: 70px;overflow:hidden;position:absolute;top: 137px;z-index: 9999;cursor:pointer;display: none;background:#222  url('../../images/slide_but.png') 0px 0px;}
+.middle .banner .pre{left:5px;background-position:0px 0px;}
+.middle .banner .next{right:5px;background-position:-48px 0px;}
+
+.index-top{width: 100%;float: left;@include inline-block;position: relative;z-index: 2;
+	.p-category{
+		margin-left: 210px;background: #f7f7f7;border-bottom: #ddd solid 1px;border-right: #ddd solid 1px;width: 989px;float: left;@include inline-block;height: 40px;line-height: 40px;
+		dl{
+			width: 85%;@include inline-block;float: left;
+			dt{float: left;color: #555;font-size: 14px;margin-left: 30px;margin-right: 5px;}
+			dd{float: left;margin-right: 10px;
+				a{color: #888;
+					&:hover{color: #317ee7;}
+				}
+				em{margin-left: 8px;color: #888;}
+			}
+		}
+		.view-all{float: right;margin-right: 10px;color: #317ee7;
+			&:hover{color: #FF771C;}
+		}
+	}
+	.fl{width: 210px;padding-top: 520px;}
+	.middle{float: left;margin: 10px;
+		.banner{width: 608px;z-index: 5;height: 340px;border: #ddd solid 1px;position: relative;overflow: hidden;
+			ul{
+				&.slide-banner{
+					width: 100%;position: relative;
+					li{
+						width: 100%;text-align: center;position: absolute;top: 0;left: 0;
+					}
+				}
+			}
+		}
+		.company{width: 609px;z-index: 5;border: #ddd solid 1px;position: relative;border-bottom: 0;border-right: 0;margin-top: 12px;height: 267px;overflow: hidden;
+			ul{
+
+					width: 100%;position: relative;z-index: 10;
+					li{
+						width: 100%;text-align: center;@include inline-block;position: absolute;top: 0;left: 0;
+						a{float: left;border-right: #ddd solid 1px;border-bottom: #ddd solid 1px;
+							img{transition: all 0.6s ease 0s;
+								&:hover{ @include opacity(60);}
+							}
+						}
+					}
+
+			}
+			.focus{position: absolute;bottom: 5px;left: 50%;z-index: 100;margin-left: -15px;z-index: 11;
+				span {
+					width: 10px;height: 10px;line-height: 10px;float: left;margin-left: 5px;display: inline;text-align: center;background: #ccc;border-radius:50px;font-size: 0;
+				&.cur{background: #ff8c1d;}
+				}
+			}
+		}
+	}
+	.fr{
+		.question{
+			border: #ddd solid 1px;margin-top: 10px;width: 358px;height: 149px;position: relative;overflow: hidden;border-right: 0;
+			.back{position: absolute;right: 20px;top: 10px;color: #999;z-index: 10;cursor: pointer;display: none;
+						&:hover{color: #777;}
+					}
+			ul{
+				@include inline-block;width: 104%;
+				li{
+					float: left;width: 115px;border-right: #ddd solid 1px;padding: 2px 1px 24px 2px;cursor: pointer;
+
+					i{display: block;background: url('../../images/ico-index-2015.png');
+						&.i1{background-position: 0 -625px;width: 55px;height: 50px;margin: 20px auto;}
+						&.i2{background-position: -88px -625px;width: 55px;height: 50px;margin: 20px auto;}
+						&.i3{background-position: -168px -625px;width: 55px;height: 50px;margin: 20px auto;}
+					}
+					p{width: 100%;text-align: center;color: #999;font-size: 12px;
+						&.tit{font-size: 14px;color: #333;margin-top: -8px;padding-bottom: 3px;}
+					}
+					.default{width: 100%;margin: 0 auto;}
+					.hover{transition: top 0.5s ease-in-out 0s;background: #fff;position: absolute;top: 0px;display: none;z-index: 9;
+					left: 0px;width: 347px;padding-top: 10px;padding-left: 10px;height: 140px;border-bottom: #ddd solid 1px;border-right: #ddd solid 1px;
+						p{width: 100%;font-size: 14px;text-align: left;color: #333;font-weight: bold;}
+						.step{
+							width: 108%;margin-top: 2px;
+							span{
+								float: left;display: block;width: 100px;height: 110px;background: url('../../images/ico-index-2015.png');text-align: center;position: relative;
+								&.s1{background-position: 0 -61px;}
+								&.s2{background-position: 0px -180px;}
+								&.s3{background-position: 0px -295px;}
+								em{position: absolute;top: 35px;right: 12px;
+									&.t25{top: 25px;}
+									&.t28{top: 28px;}
+								}
+							}
+							i{float: left;margin: 0 5px;display: block;background: url('../../images/ico-index-2015.png')-127px 0px;width: 10px;height: 15px;margin-top: 48px;}
+						}
+					}
+					&.bd0{width: 116px;}
+					&:hover{
+						padding: 0px 0px 21px 0px;border: #317EE7 solid 2px;
+						//.hover{display: block;}
+					}
+				}
+			}
+		}
+		.find-goods{
+			margin-top: 9px;
+			a{
+				transition: all 0.6s ease 0s;padding-left: 35px;display: block;background: url('../../images/btn-bg-line.png')repeat-x;width: 325px;height: 40px;line-height: 40px;font-size: 18px;text-align: center;color: #fff;position: relative;
+				i{display: block;background: url('../../images/ico-index-2015.png') -115px -80px;width: 55px;height: 40px;position: absolute;top: 7px;left: 85px;}
+				&:hover{@include opacity(90); }
+			}
+		}
+		.state{
+			border: #ddd solid 1px;width: 358px;margin-top: 10px;height: 282px;overflow: hidden;
+			ul{
+				&.tab{
+					width: 100%;@include inline-block;margin-bottom: 5px;
+					li{
+						padding-left: 10px;float: left;position: relative;background: #f5f5f5;width: 169px;border-bottom: #ddd solid 1px;height: 35px;line-height: 35px;text-align: center;color: #333;font-size: 14px;cursor: pointer;
+						i{display: block;background: url('../../images/ico-index-2015.png') -35px 0px;width: 25px;height: 25px;position: absolute;top: 8px;left: 28px;}
+						&.li1{
+							i{background-position: -149px 0;}
+							&.cur{border-right: #ddd solid 1px;padding-left:11px;
+								i{left: 28px;}
+							}
+						}
+						&.li2{
+							i{background-position: -182px 0;top: 9px;left: 23px;}
+							&.cur{border-left: #ddd solid 1px;padding-left:10px;
+								i{left: 22px;}
+							}
+						}
+						&.cur{background: #fff;border-bottom: 0;width: 167px;}
+					}
+				}
+				&.doing{
+					width: 95%;margin: 7px auto;
+					li{width: 100%;@include inline-block;padding: 7px 0;float: left;
+						span{color: #333;
+							&.time{float: right;color: #999;padding-right: 5px;}
+							&.name{color: #0f80e3;margin-right: 5px;}
+							&.service{color: #999;margin: 0 5px;}
+							&.action-y{color: #ff7200;}
+							&.action-g{color: #4fd756;}
+						}
+						div{float: left;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;width: 285px;display: inline-block;}
+						&:hover{background: #f7f8fb;}
+					}
+				}
+			}
+			table{
+
+				&.price{
+					width: 95%;margin: 0px auto;margin-left: 10px;
+					th{color: #333;text-align: left;background: #eee;padding:3px 0px 3px 5px;font-weight: normal;
+						&.name{width: 195px;}
+					}
+					td{color: #777;text-align: left;padding:10px 15px 10px 5px;font-weight: normal;
+						&.name{
+							width: 235px;padding-right: 5px;
+							div{width: 235px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;display: block;color: #555;
+							//&:hover{color: #0f80e3;}
+							}
+						}
+						em{
+							&.yellow{color: #ff7200;}
+							&.green{color: #4fd756;}
+						}
+						&.space{height: 8px;padding: 0;}
+					}
+					tr{
+						&:hover{background: #f7f8fb;}
+						&.tr0{
+							&:hover{background: none;}
+						}
+					}
+				}
+			}
+			.f-price{
+				table{width: 95%;margin: 0 auto;}
+			}
+		}
+		.notice{
+			border: #ddd solid 1px;width: 358px;margin-top: 10px;height: 116px;
+			ul{
+				&.tab{
+					width: 100%;@include inline-block;
+					li{
+						float: left;position: relative;background: #f5f5f5;width: 179px;border-bottom: #ddd solid 1px;height: 35px;line-height: 35px;text-align: center;color: #333;
+						font-size: 14px;cursor: pointer;
+						&.li1{
+							&.cur{border-right: #ddd solid 1px;padding-left: 1px;}
+						}
+						&.li2{
+							&.cur{border-left: #ddd solid 1px;padding-left: 0;}
+						}
+						&.cur{background: #fff;border-bottom: 0;width: 177px;}
+					}
+				}
+				&.news{
+					width: 96%;@include inline-block;padding: 0 2%;margin-top: 15px;
+					li{
+						padding-left: 8px;float: left;width: 152px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;margin-right: 10px;background: url('../../images/ico-index-2015.png') -2px -42px;
+						margin-bottom: 10px;
+						a{
+							color: #555;
+							&:hover{color: #0f80e3;}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.hot-store{
+	margin-top: 10px;@include inline-block;width: 1200px;overflow: hidden;
+	.tit-h2{
+		width: 100%;@include inline-block;
+		h2{float: left;font-size: 18px;color: #333;}
+		a{float: right;font-size: 12px;margin-top: 2px;}
+	}
+	.list{
+		background: #f7f7f7;padding: 15px;
+		.wrap-img{width: 175px;height: 175px;line-height: 172px;overflow: hidden;text-align: left;
+				a{display: inline-block;width: 100%;text-align: center;
+					.ie7 &{position:absolute;top:50%;}
+				}
+				img{max-width: 175px;max-height: 175px;vertical-align: middle;
+					.ie7 &{position:relative;top:-50%;}
+				}
+				.ie7 &{position: relative;}
+			}
+		ul{
+			@include inline-block;width: 110%;
+			li{float: left;margin-right: 12px;background: #fff;padding: 5px;width: 175px;
+				a{display: block;width: 100%;height: 100%;cursor: pointer;color: #333;font-size: 14px;}
+				&:hover{
+					a{color: #0f80e3;}
+				}
+			}
+		}
+		p{text-align: center;margin-top: 5px;width: 100%;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
+			&.price{color: #777;
+				em{color: #ff7200;}
+			}
+		}
+	}
+}
+
+.store{
+	width: 100%;@include inline-block;margin-top: 15px;
+	.fl{
+		@include inline-block;width: 840px;
+		.tit-h2{
+			width: 620px;@include inline-block;margin-bottom: 5px;
+			h2{float: left;font-size: 18px;color: #333;border-left: #488fef solid 6px;padding-left: 8px;display: block;height: 20px;line-height: 20px;}
+			i{display: block;width: 111px;height: 15px;background: url('../../images/ico-index-2015.png') -279px -4px;float: left;margin-top: 3px;margin-left: 2px;font-size: 0;}
+			a{float: right;font-size: 12px;margin-top: 2px;margin-right: 10px;
+			&:hover{color: #FF771C;}
+			}
+		}
+		.list{float: left;width: 620px;border: #ddd solid 1px;padding-top: 3px;height: 311px;
+			dl{
+				width: 96%;@include inline-block;padding: 5px 2% 4px 2%;border-bottom: dotted 1px #ddd;position: relative;
+				dt{float: left;font-weight: bold;color: #333;width:125px ;}
+				dd{float: left;width: 350px;@include inline-block;
+					a{color: #777;margin-right: 20px;margin-bottom: 5px;float: left;
+					&:hover{color: #0f80e3;}
+					&.more{position: absolute;right: 0px;top: 5px;display: block;border: 1px solid #DDD;width: 35px;height: 15px;line-height: 15px;text-align: center;
+						.ie7 &{top: 9px;}
+					}
+					}
+				}
+				&.bd0{border: 0;}
+				.ie7 &{padding: 9px 2% 10px 2%;}
+			}
+		}
+		.ad{float: left;border-top: #ddd solid 1px;
+			ul{
+				li{border-bottom: #ddd solid 1px;}
+				img{transition: all 0.6s ease 0s;
+								&:hover{ @include opacity(60);}
+							}
+			}
+		}
+	}
+	.fr{
+		width: 360px;
+		.tit-h2{
+			width: 100%;@include inline-block;margin-bottom: 5px;height: 20px;line-height: 20px;
+			h2{float: left;font-size: 18px;color: #333;margin-left: 10px;}
+			a{float: right;font-size: 12px;margin-top: 2px;
+			&:hover{color: #FF771C;}}
+		}
+		.hot{
+			width: 358px;border: #ddd solid 1px;
+			table{
+				width: 96%;margin: 10px auto;
+				th{color: #333;text-align: left;background: #eee;padding:3px 5px 3px 5px;font-weight: normal;
+					&.txt-r{text-align: right;}
+					&.txt-c{text-align: center;}
+				}
+				td{color: #999;text-align: left;padding:8px 5px 7px 5px;font-weight: normal;text-align: center;
+					&.name{text-align: left;
+						a{width: 205px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;display: block;color: #555;
+						&:hover{color: #0f80e3;}
+						}
+					}
+					em{
+						&.yellow{color: #ff7200;}
+						&.green{color: #4fd756;}
+					}
+					&.space{height: 6px;padding: 0;}
+					&.txt-r{text-align: right;}
+				}
+				tr{
+					&:hover{background: #f7f8fb;}
+					&.tr0{
+							&:hover{background: none;}
+						}
+				}
+			}
+		}
+	}
+}
+
+.brand{
+	width: 100%;@include inline-block;margin-top: 15px;
+	.fl{
+		@include inline-block;width: 840px;
+		.tit-h2{
+			width: 620px;@include inline-block;margin-bottom: 5px;
+			h2{float: left;font-size: 18px;color: #333;border-left: #fab928 solid 6px;padding-left: 8px;display: block;height: 20px;line-height: 20px;}
+			i{display: block;width: 111px;height: 15px;background: url('../../images/ico-index-2015.png') -279px -4px;float: left;margin-top: 3px;margin-left: 2px;font-size: 0;}
+			a{float: right;font-size: 12px;margin-top: 2px;margin-right: 10px;
+			&:hover{color: #FF771C;}
+			}
+		}
+		.list{float: left;width: 620px;border: #ddd solid 1px;@include inline-block;
+			dl{
+				width: 96%;@include inline-block;padding: 15px 2% 15px 2%;border-bottom: dotted 1px #ddd;position: relative;float: left;
+				dt{float: left;font-weight: bold;color: #333;width:80px ;}
+				dd{float: left;width: 465px;@include inline-block;
+					a{color: #777;margin-right:16px;margin-bottom: 5px;float: left;
+					&:hover{color: #0f80e3;}
+					&.more{position: absolute;right: 0px;top: 15px;display: block;border: 1px solid #DDD;width: 35px;height: 15px;line-height: 15px;text-align: center;}
+					}
+				}
+				&.bd0{border: 0;}
+				.ie7 &{padding: 18px 2% 17px 2%;}
+			}
+		}
+		.ad{float: left;border-top: #ddd solid 1px;
+			ul{
+				li{border-bottom: #ddd solid 1px;}
+				img{transition: all 0.6s ease 0s;
+								&:hover{ @include opacity(60);}
+							}
+			}
+		}
+	}
+	.fr{
+		width: 360px;
+		.tit-h2{
+			width: 100%;@include inline-block;margin-bottom: 5px;height: 20px;line-height: 20px;
+			h2{float: left;font-size: 18px;color: #333;margin-left: 10px;}
+			a{float: right;font-size: 12px;margin-top: 2px;
+			&:hover{color: #FF771C;}
+			}
+		}
+		.hot{
+			width: 358px;border: #ddd solid 1px;
+			table{
+				width: 96%;margin: 10px auto;
+				th{color: #333;text-align: left;background: #eee;padding:3px 5px 3px 5px;font-weight: normal;
+					&.txt-r{text-align: right;}
+					&.txt-c{text-align: center;}
+				}
+				td{color: #999;text-align: left;padding:8px 5px 8px 5px;font-weight: normal;
+					&.name{text-align: left;
+						a{width: 208px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;display: block;color: #555;
+						&:hover{color: #0f80e3;}
+						}
+					}
+					em{
+						color: #ff7200;margin-right: 2px;
+					}
+					&.space{height: 5px;padding: 0;}
+					&.txt-r{text-align: right;}
+				}
+				tr{
+					&:hover{background: #f7f8fb;}
+					&.tr0{
+							&:hover{background: none;}
+						}
+				}
+			}
+		}
+	}
+}
+
+.finance{
+	width: 100%;@include inline-block;margin-top: 15px;
+	.fl{
+		@include inline-block;width: 840px;
+		.tit-h2{
+			width: 840px;@include inline-block;margin-bottom: 5px;
+			h2{float: left;font-size: 18px;color: #333;border-left: #70be2d solid 6px;padding-left: 8px;display: block;height: 20px;line-height: 20px;}
+			i{display: block;width: 111px;height: 15px;background: url('../../images/ico-index-2015.png') -279px -4px;float: left;margin-top: 3px;margin-left: 2px;font-size: 0;}
+			a{float: right;font-size: 12px;margin-top: 2px;margin-right: 10px;
+			&:hover{color: #FF771C;}
+			}
+		}
+		.list{
+			ul{
+				@include inline-block;width: 846px;height: 220px;overflow: hidden;position: relative;
+				li{float: left;width: 33%;border: #ddd solid 1px;margin-right: -1px;padding-bottom: 16px;
+					span{display: block;width: 100%;height: 100%;text-align: center;font-size: 14px;color: #777;position: relative;
+						em{font-size: 24px;color: #444;}
+						i{border-radius: 90px;width: 107px;height: 107px;display: block;margin: 25px auto;background: url('../../images/ico-index-2015.png');margin-bottom: 10px;
+							&.i1{background-color:#F4CE33;background-position: -383px -49px;}
+							&.i2{background-color:#48CCBF;background-position: -383px -178px;}
+							&.i3{background-color:#F67823;background-position: -385px -307px;}
+						}
+//						&:hover{
+//							i{
+//								&.i1{background-color: #debc2f;}
+//								&.i2{background-color: #40b6aa;}
+//								&.i3{background-color: #de6c1f;}
+//							}
+//						}
+
+					}
+					.hover{position: absolute;top: 0px;background: #fff;z-index: 9;height: 213px;width: 557px;transition: all 0.4s ease-in-out 0s;
+						.l{@include inline-block;width: 100%;
+							span{float: left;width: 150px;margin-left: 15px;
+								i{margin-top: 22px;}
+							}
+							.detail{float: left;margin-top: 42px;margin-left: 30px;
+								p{color: #777;font-size: 14px;line-height: 24px;
+									&.ps{color: #f67823;margin-top: 10px;}
+								}
+							}
+						}
+						.r{position: absolute;right: 30px;top: 25px;z-index: 99;
+							.btn{
+								width: 125px;
+								.amount{
+									margin-top: 10px;background: #6d4141;width: 100%;display: block;height: 40px;line-height: 40px;text-align: center;font-size: 14px;color: #fff;border-radius:50px;
+									&:hover{background: #4f3030;}
+								}
+							}
+						}
+					}
+					.f1{left:-580px;border: #f4ce33 solid 2px;
+						.apply{
+							background: #F4CE33;width: 100%;display: block;height: 40px;line-height: 40px;text-align: center;font-size: 14px;color: #fff;border-radius:50px;
+							&:hover{background: #DEBC2F;}
+						}
+					}
+					.f2{left: -580px;border: #48CCBF solid 2px;
+						.apply{
+							background: #48CCBF;width: 100%;display: block;height: 40px;line-height: 40px;text-align: center;font-size: 14px;color: #fff;border-radius:50px;
+							&:hover{background: #40B6AA;}
+						}
+					}
+					.f3{right: -585px;border: #F67823 solid 2px;
+//						.l{
+//							.detail{margin-top: 30px;}
+//						}
+						.btn{
+//							@include inline-block;width: 100%;margin-top: 20px;
+//							.amount{
+//								float: left;background: #6d4141;width: 125px;margin-left: 10px;display: block;height: 40px;line-height: 40px;text-align: center;font-size: 14px;color: #fff;border-radius:50px;
+//								&:hover{background: #4f3030;}
+//							}
+//							.apply{
+//								float: left;background: #F67823;width: 125px;display: block;height: 40px;line-height: 40px;text-align: center;font-size: 14px;color: #fff;border-radius:50px;
+//								&:hover{background: #DE6C1F;}
+//							}
+							.apply{
+								background: #F67823;width: 100%;display: block;height: 40px;line-height: 40px;text-align: center;font-size: 14px;color: #fff;border-radius:50px;
+								&:hover{background: #DE6C1F;}
+							}
+						}
+					}
+//					&:hover{
+//						.hover{top: 0px;display: block;}
+//					}
+					&.h1{
+						&:hover{
+							.hover{left: 0px;}
+						}
+					}
+					&.h2{
+						&:hover{
+							.hover{left: 0px;}
+						}
+					}
+					&.h3{
+						&:hover{
+							.hover{right: 5px;}
+						}
+					}
+				}
+			}
+		}
+	}
+	.fr{
+		width: 360px;
+		.tit-h2{
+			width: 100%;@include inline-block;margin-bottom: 5px;height: 20px;line-height: 20px;
+			h2{float: left;font-size: 18px;color: #333;margin-left: 10px;}
+			a{float: right;font-size: 12px;margin-top: 2px;
+			&:hover{color: #FF771C;}
+			}
+		}
+		.hot{
+			width: 358px;border: #ddd solid 1px;
+			table{
+				width: 96%;margin: 10px auto;
+				th{color: #333;text-align: left;background: #eee;padding:3px 5px 3px 5px;font-weight: normal;
+					&.txt-r{text-align: right;}
+					&.txt-c{text-align: center;}
+				}
+				td{color: #555;text-align: left;padding:8px 5px 7px 5px;font-weight: normal;text-align: center;
+					&.name{width: 230px;text-align: left;
+						div{width: 230px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;display: block;color: #555;
+						//&:hover{color: #0f80e3;}
+						}
+					}
+					em{
+						&.yellow{color: #ff7200;}
+						&.green{color: #4fd756;}
+					}
+					&.space{height: 6px;padding: 0;}
+					&.day{color: #999;}
+				}
+				tr{
+					&:hover{background: #f7f8fb;}
+					&.tr0{
+							&:hover{background: none;}
+						}
+				}
+			}
+		}
+	}
+}
+
+.channel{
+	margin-top:20px;@include inline-block;overflow: hidden;
+	h2{font-size: 18px;color: #333;width: 100%;
+		em{color: #aaa;font-size: 12px;}
+	}
+	ul{
+		width: 110%;@include inline-block;margin-top: 30px;
+		li{
+			float: left;@include inline-block;width: 257px;
+			.fl{
+				i{width: 65px;height: 65px;display: block;background: url('../../images/ico-index-2015.png');margin-top: -6px;
+					&.i1{background-position: -262px -80px;}
+					&.i2{background-position: -264px -170px;}
+					&.i3{background-position: -262px -265px;margin-right: 5px;}
+					&.i4{background-position: -262px -346px;margin-right: 15px;}
+					&.i5{background-position: -262px -436px;margin-right: 15px;}
+				}
+			}
+			.fr{
+				float: left;
+				p{color: #333;width: 100%;font-size: 14px;
+					&.ps{color: #777;font-size: 12px;}
+				}
+				a{
+				&:hover{color: #FF771C;}
+				}
+				.btn{
+					display: block;width: 80px;height: 25px;text-align: center;line-height: 25px;border: #ddd solid 1px;margin-top: 5px;
+					&:hover{border: #ccc solid 1px;color: #FF771C;}
+				}
+			}
+		}
+	}
+	.ie7 &{margin-bottom: 20px;}
+}
+@import "pub_css/c-z-package.scss";//小屏幕响应包
+.menu_new_sec .nav .spec .drop-memu{display: inline-block;}

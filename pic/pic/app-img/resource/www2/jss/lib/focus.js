@@ -1,0 +1,1 @@
+define([],function(){return function(e,t){t=t||50,window.setTimeout(function(){document.getElementById(e).focus()},t)}});

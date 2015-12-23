@@ -1,0 +1,1 @@
+https://github.com/php-curl-class/php-curl-class.git

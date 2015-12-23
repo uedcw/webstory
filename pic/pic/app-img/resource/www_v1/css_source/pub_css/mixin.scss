@@ -1,0 +1,22 @@
+@charset "UTF-8";				// [中文 UTF-8]
+$lte7:true !default;//是否兼容ie6,7
+// 背景图片
+@mixin img_bg($img, $x:0, $y:0, $repeat:no-repeat, $bgcolor:0){
+    @if $bgcolor != 0 {
+        background: image-url(#{$img}) $bgcolor $repeat $x $y;
+    } @else {
+        background: image-url(#{$img}) $repeat $x $y;
+    }
+}
+// inline-block
+// ie6-7 *display: inline;*zoom:1;
+@mixin inline-block {
+  display: inline-block;
+  @if $lte7 {
+    *display: inline;*zoom:1;
+  }
+}
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}

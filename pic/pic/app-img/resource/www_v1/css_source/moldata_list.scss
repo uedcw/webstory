@@ -1,0 +1,197 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss"; 
+
+.moldata_list{
+	width:100%;
+	.list_top{
+		@include inline-block;width:100%;background: #f4f4f4;border: #ddd solid 1px;height: 40px;line-height: 40px;float: left;
+		.results{
+			color: #888;margin-left: 10px;
+			em{color:#ff6600;margin: 0 5px;}
+		}
+		.search{
+			margin-right: 10px;
+			span{color: #888;}
+			a{
+				color:#317EE7;
+				&:hover{color:#ff6600;}
+			}
+		}
+	}
+	.list_con{
+		@include inline-block;width:100%;
+		dl{
+			@include inline-block;width:100%;float: left;margin-top: 12px;border: #ddd solid 1px;height: 170px;
+			dt{
+				float: left;width:900px;@include inline-block;
+				.product_img{
+					width: 120px;position: relative;margin: 18px;margin-top: 25px;
+					.wrap-img{width: 120px;height: 120px;line-height: 120px;overflow: hidden;
+						text-align: left;
+						a{display: inline-block;width: 100%;text-align: center;
+							.ie7 &{position:absolute;top:50%;}
+						}
+						img{max-width: 120px;max-height: 120px;vertical-align: middle;
+							.ie7 &{position:relative;top:-50%;}
+						}
+						.ie7 &{position: relative;}
+					}
+					.mask{
+						position: absolute;top: 1px;left:1px;width: 120px;height: 120px;
+						@include opacity(0);transition: all 0.6s ease 0s;z-index:0;
+						.bg{width: 120px;height: 120px;@include opacity(50);background: #000;z-index:9;
+							position: absolute;top: 0;left:0;}
+						a{
+							display: block;width:30px;float: left;position: relative;z-index:10;
+							padding-top: 35px;cursor: pointer;margin-right: 5px;margin-left: 28px;
+							i{
+								display: block;background: url('../../images/moldata_ico.png') no-repeat;width:30px;height:30px;
+								margin: 10px auto 1px;
+							}
+							p{
+								text-align: center;color:#fff;background: url('../../images/moldata_ico.png') -100px 0px no-repeat;
+								width: 76px;height:30px;line-height: 36px;margin-left: -24px;display:none;
+							}
+							&:hover{
+								i{
+									background-position: 0 -46px;
+								}
+								p{
+									display: block;
+								}
+							}
+						}
+						.view_img{
+							display: block;width:30px;float: left;position: relative;z-index:10;
+							padding-top: 35px;
+							&:hover{
+								.wrap-bigimg{
+									display: block;
+								}
+							}
+							.wrap-bigimg{width: 280px;height: 280px;line-height: 280px;overflow: hidden;border: #ddd solid 1px;
+									text-align: left;  position: absolute;right:-330px;top:-50px;background:#fff;display:none;
+									span{display: inline-block;width: 100%;text-align: center;
+										.ie7 &{position:absolute;top:50%;}
+									}
+									img{max-width: 280px;max-height: 280px;vertical-align: middle;
+										.ie7 &{position:relative;top:-50%;}
+									}
+									.ie7 &{position: relative;}
+								}
+							i{
+								display: block;background: url('../../images/moldata_ico.png') -43px 0px no-repeat;width:30px;height:30px;
+								margin: 10px auto 1px;
+							}
+							p{
+								text-align: center;color:#fff;background: url('../../images/moldata_ico.png') -100px 0px no-repeat;
+								width: 76px;height:30px;line-height: 36px;margin-left: -24px;display:none;
+							}
+							&:hover{
+								i{
+									background-position: -44px -47px;
+								}
+								p{
+									display: block;
+								}
+							}
+						}
+					}
+					&:hover{
+						.mask{@include opacity(100);z-index:99}
+					}
+				}
+				.product_info{
+					width: 740px;margin-top: 12px;
+						.title{
+							margin-bottom: 5px;
+							h3{width:740px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;font-size: 18px;}
+							a{
+								font-size: 18px;color:#317ee7;cursor:pointer;
+								&:hover{@include opacity(90);}
+							}
+							em{color:#ff6600;}
+						}
+						.info_1{
+							width: 100%;@include inline-block;
+							span{
+								display:block;float: left;margin-right: 25px;color:#333;
+								&.name{
+									max-width: 670px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;margin-right: 0px;
+									a{
+										color: #777;
+										&:hover{
+											color: #317ee7;
+										}
+									}
+								}
+								&.more{
+									float: left;
+								}
+							}
+						}
+						.info_2{
+							width: 100%;@include inline-block;margin: 5px 0px;
+							span{
+								@include inline-block;float: left;
+								a{
+									display: block;height:25px;line-height: 25px;color:#555;float: left;border: #ddd solid 1px;
+									padding: 1px 10px;margin-right: 5px;
+									&:hover{
+										background: #317ee7;border: 0;color:#fff;padding: 2px 11px;
+									}
+								}
+							}
+							.more{float: left;margin-top: 6px;margin-left:10px;}
+						}
+						.info_3{
+							width: 100%;@include inline-block;
+							a{
+								display: block;height:25px;line-height: 25px;color:#777;float: left;background: #eeeeee;
+								padding: 0px 5px;margin-right: 5px;
+								&:hover{
+										background: #317ee7;color:#fff;
+								}
+							}
+						}
+					}
+				}
+			}
+			dd{
+				float: right;background: #f7f7f7;height: 140px;overflow: hidden;border-left: #ddd solid 1px;width:260px;padding: 15px;
+				.total{
+					width: 100%;@include inline-block;
+					span{
+						color: #010101;font-size: 14px;float: left;
+						a{
+							color: #ff6600;
+						}
+					}
+					.more{
+						display: block;padding: 1px 8px;height:20px;line-height: 20px;border: #ddd solid 1px;color:#777;
+						float: right; background:#fff;
+						&:hover{
+							background: #317ee7;border: 0;color:#fff;padding: 2px 9px;
+						}
+					}
+				}
+				.rec_company{
+					margin-top: 5px;
+					li{
+						width: 100%;@include inline-block;margin-bottom: 3px;
+						i{float: left;display:block;width:3px;height:3px;background: #777;margin-top: 7px;margin-right: 7px;}
+						a{
+							float: left;width:245px;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;display:block;
+							color:#777;
+							&:hover{color:#317ee7}
+						}
+					}
+				}
+			
+		}
+	}
+} 
+

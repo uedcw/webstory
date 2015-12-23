@@ -1,0 +1,170 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+@import "setting.scss", "mixin.scss";
+@import "compass", "reset.scss", "public.scss", "old_public.scss";
+
+body{
+  position:relative;
+  background-color: #FFFFFF;
+}
+.finance_header{
+  margin-top: 10px;
+  height:316px;
+  @include img_bg('finance_header.png',0px, 0px);
+}
+.finance_type{
+  background-color: #eaeaea;
+  height: 53px;
+  .switch_form{
+      margin: 0px auto;
+      width: 436px;
+      a{
+        float: left;
+        display: block;
+        width: 218px;
+        color: #697a8c;
+        font-size: 18px;
+        text-align: center;
+        height: 40px;
+        padding:13px 0px 10px 0px;
+        &:hover{
+          @include img_bg('finance_swtich_but.png',0px, 0px);
+          color: #FFFFFF;
+        }
+        &.on{
+          @include img_bg('finance_swtich_but.png',0px, 0px);
+          color: #FFFFFF;
+        }
+      }
+  }
+}
+.finance_title{
+  clear: both;
+  @include heights(20px);
+  display: block;
+  border-bottom: 1px solid #5a7183;
+  span{
+    padding: 0px 15px;
+    left: 320px;
+    color: #4b709a;
+    font-size: 25px;
+    position: relative;
+    top:15px;
+    background-color: #ffffff;
+    font-weight: 200;
+    &.select{
+      left: 285px;
+    }
+    &.exc_supply{
+      left: 390px;
+    }
+  }
+}
+.finance_content{
+  margin-top: 15px;
+  width: 500px;
+  padding-bottom: 10px;
+  float: left;
+  &.is_service{
+    margin-top: 28px;
+    height: 280px;
+    @include img_bg('is_service.jpg',10px, 10px);
+    &.collect{
+      @include img_bg('is_service1.png',10px, 10px);
+    }
+  }
+  &.select_service{
+    margin-left: 90px;
+    width: 300px;
+    margin-top: 28px;
+    height: 260px;
+    @include img_bg('select_service.png',10px, 10px);
+    &.collect{
+      @include img_bg('select_service2.png',10px, 10px);
+    }
+  }
+
+  .is_service_word{
+    color: #000;
+    line-height: 45px;
+    font-size: 21px;
+    margin: 10px 15px;
+    word-break: break-all;
+  }
+  .is_service_list{
+    margin-left: 15px;
+    margin-top: 25px;
+    li{
+      color: #676767;
+      font-size: 20px;
+      line-height: 35px;
+    }
+  }
+  .select_service_list{
+    width: 480px;
+    margin-top: 55px;
+    margin-left: 25px;
+    li {
+      color: #676767;
+      font-size: 20px;
+      line-height: 60px;
+    }
+  }
+}
+.supply_step{
+  margin-top: 50px;
+  height: 140px;
+  @include img_bg('supply_step.png',10px, 0px);
+  &.collect{
+    @include img_bg('supply_step1.png',10px, 0px);
+  }
+}
+.add_supply_form{
+  width: 780px;
+  margin: 0px auto;
+  margin-top:50px;
+}
+.sub_finance{
+  @include img_bg('sub_finance_but.png',-2px, 0px);
+  width: 118px;
+  height: 40px;
+  margin-left: 119px;
+  margin-top: 1px;
+  border: none;
+}
+.sub_finance:hover{
+  cursor: pointer;
+
+}
+.contact_info{
+  @include img_bg('contact_info.png',0px, 0px);
+  width: 1000px;
+  height: 50px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.rela_content{
+  display: none;
+  &.show{
+    display: block;
+  }
+}
+
+.input_form{
+  &.bank{
+    label {
+      display: inline-block;
+      width: 120px;
+      text-align: right;
+      font-size: 18px;
+      color: #000;
+    }
+    .input {
+      color: #555;
+      font-size: 14px;
+      border: 1px solid #b5b5b5;
+      height: 29px;
+      width: 500px;
+    }
+  }
+}

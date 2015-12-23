@@ -1,0 +1,557 @@
+@charset "UTF-8";			// [中文 UTF-8]
+
+// 根据使用习惯，对reset上进行补充
+//-----------------------------------------------------
+.wrap{width: 1200px;margin: 0 auto;}
+html {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+body { _margin:0; _height:100%; }/*IE6 BUG*/
+img {
+	vertical-align: middle;
+}
+textarea {
+	resize: vertical;
+}
+ul,ol,li,dl,dd{
+	margin: 0;
+	padding:0;
+}
+ul,ol{
+	list-style: none outside none;
+}
+body{font-family:'Microsoft YaHei',Arial;font-size: 12px;}
+p,h2,h3,h4{margin: 0;padding: 0;font-weight: normal;}
+em{font-style: normal;}
+a{
+	text-decoration:none;
+
+}
+a:focus {
+     outline:none;
+     -moz-outline:none;
+}
+.fl{float: left;}
+.fr{float: right;}
+
+/*form控件公共样式*/
+input[type="text"]{border: 1px solid #ddd;background:#fff;padding-left:5px;font-family:'Microsoft YaHei',Arial;}
+textarea{border: 1px solid #ddd;background:#fff;padding:5px 0px 0px 5px;resize:none;font-family:'Microsoft YaHei',Arial;}
+select{border: 1px solid #ddd;background:#fff;font-family:'Microsoft YaHei',Arial;}
+button{font-family:'Microsoft YaHei',Arial;}
+input{font-family:'Microsoft YaHei',Arial;}
+input[type="text"]{
+	&:hover{
+	       box-shadow: 0 0 5px   rgba(15, 128, 227, 0.5);
+	}
+	&:focus{
+	       box-shadow: 0 0 5px   rgba(15, 128, 227, 0.5);
+    }
+}
+input[type="text"].error{
+           border:#ff0000 solid 1px;
+     &:hover{
+	       box-shadow:none;
+	 }
+	  &:focus{
+	       box-shadow:none;
+	 }
+}
+input[type="text"].input_readonly{
+	 &:hover{
+	       box-shadow:none;
+	 }
+	  &:focus{
+	       box-shadow:none;
+	 }
+}
+input[type="text"].input_disabled{
+	 &:hover{
+	       box-shadow:none;
+	 }
+	  &:focus{
+	       box-shadow:none;
+	 }
+}
+
+textarea.error{
+           border:#ff0000 solid 1px;
+}
+span.error{
+     border:#febcb7 solid 1px;background:#ffeceb;color:#ff1200;display:block;padding: 0px 5px 0px 5px;
+}
+
+//按钮样式
+.btn01{background: #154179;//蓝色
+	&:hover{background: #123868;}
+}
+.btn02{background: #ff6458;//粉色
+	&:hover{background: #ee4f43;}
+}
+.btn03{background: #99cc00;//绿色
+	&:hover{background: #91c002;}
+}
+.btn04{background: #317ee7;//淡蓝色
+	&:hover{background: #2c6dc6;}
+}
+.btn05{background: #ff771c;//黄色
+	&:hover{background: #e66c1a;}
+}
+
+.disable{background: #bbb;
+	&:hover{background: #bbb;}
+}
+//宽度
+$width-list: 100,180,280,480;
+@each $w in $width-list{
+	.w#{$w}{
+		width:#{$w}px;
+	}
+}
+//margin-top
+$margin-top: 2,5,10,15,20,25,30;
+@each $mt in $margin-top{
+	.mt#{$mt}{
+		margin-top:#{$mt}px;
+	}
+}
+//margin-bottom
+$margin-bottom: 5,10,15,20,25,30;
+@each $mb in $margin-bottom{
+	.mb#{$mb}{
+		margin-bottom:#{$mb}px;
+	}
+}
+//margin-left
+$margin-left: 5,10,15,20,25,30;
+@each $ml in $margin-left{
+	.ml#{$ml}{
+		margin-left:#{$ml}px;
+	}
+}
+//margin-right
+$margin-right: 5,10,15,20,25,30;
+@each $mr in $margin-right{
+	.mr#{$mr}{
+		margin-right:#{$mr}px;
+	}
+}
+.txt-c{ text-align: center}
+.txt-l{ text-align: left}
+.txt-r{ text-align: right}
+//login
+.login{
+	background: #fff;width: 360px;position: relative;margin-top: -45px;z-index: 1;
+	.error{color: rgb(254, 105, 95); position: absolute; text-align: center; width: 100%; top: 127px;}
+	h2{font-size: 36px;font-weight: normal;text-align: center;
+		img{margin-bottom: 3px;}
+	}
+	ul{
+		width: 90%;margin: 20px auto;display: block;
+		li{
+			text-align: center;display: inline-block;width: 100%;border-bottom: #ddd solid 1px;position: relative;float: left;padding: 5px 0px;
+			input{border: 0;background: none;float: left;width: 100%;height: 35px;line-height: 35px;font-size: 16px;padding-left: 0;position: relative;z-index: 2;
+				&.i-code{width: 60%;}
+				&:hover{box-shadow:none;}
+				&:focus{box-shadow:none;}
+			}
+			.code{float: right;display: block;}
+			.btn01{display: block;text-align: center;font-size: 25px;color: #fff;height: 55px;line-height: 55px;width: 100%;border: 0;margin-top: 12px;}
+			&.title{font-size: 24px;color: #000;}
+			&.error{font-size: 14px;color: #fe695f;}
+			&.li0{border: 0;}
+		}
+	}
+}
+
+
+//contact-zh
+.contact_new{
+	border: #ddd solid 1px;margin-top: 15px;width: 89%;padding: 4%  5%  1%  5%;background: url('../images/contact.png') repeat-x right 0;
+	h2{color: #174c73;font-size: 20px;margin-bottom: 10px;}
+	p{font-size: 12px;color: #555;width: 65%;	}
+	.bm{
+		margin-top: 18px;
+		p{
+			height: 20px;line-height: 17px;padding-left: 22px;;;background: url('../images/c-z-sys-ico.png');color: #666;
+			&.tel{background-position: 0 -109px;}
+			&.mail{background-position: 0 -130px;
+				a{color: #666;}
+			}
+		}
+	}
+}
+//contact-en
+.contact_new_en{
+	border: #ddd solid 1px;margin-top: 15px;width: 89%;padding: 4%  5%  1%  5%;;background: url('../images/contact-en.png') right bottom;
+	h2{color: #174c73;font-size: 20px;margin-bottom: 0px;}
+	p{font-size: 12px;color: #777;width: 80%;	}
+	.bm{
+		margin-top: 15px;
+		p{
+			height: 25px;line-height: 25px;padding-left: 28px;;;background: url('../images/c-z-sys-ico.png');color: #666;
+			&.tel{background-position: 0 -174px;}
+			&.mail{background-position: 0 -205px;
+				a{color: #666;}
+			}
+		}
+	}
+}
+
+
+//new topbar
+.head_new{
+	@include inline-block;width: 100%;background: #f0f0f0;height: 35px;line-height: 35px;position: relative;z-index: 9;
+	a{color: #555;font-size: 12px;
+		&:hover{color: #317ee7;}
+	}
+	.fl{
+		dl{
+			@include inline-block;
+			dt{
+				float: left;
+				a{color: #333;
+					&:hover{color: #317ee7;}
+				}
+			}
+			dd{
+				float: left;margin-left:25px ;
+				span{color: #555;margin-right: 5px;}
+				.vistor{display:  none;}
+				a{
+					&.exit{color: #317ee7;margin-left: 10px;
+							&:hover{color: #FF771C;}
+						}
+				}
+				&.no-login{
+					display: none;
+					a{color: #317ee7;margin-right: 10px;
+						&:hover{color: #FF771C;}
+					}
+				}
+				&.ml10{margin-left: 10px;}
+			}
+			.message{
+				position: relative;margin-top: 5px;height: 25px;@include inline-block;width: auto;
+				i{display: block;width: 15px;height: 15px;;background: url('../images/ico-index-2015.png') -56px 0;z-index: 9;float: left;margin-top: 6px;margin-right: 3px;
+					&.arrow{background-position: 0px -24px;z-index: 10;margin-top: 6px;margin-left: 3px;}
+				}
+				em{color: #fb5651;}
+				.default{
+					position: relative;z-index: 8;padding: 1px 1px 0px 10px;width: auto;height: 30px;line-height: 25px;
+					span{margin-right: 2px;float: left;}
+					em{float: left;}
+					a{
+						&:hover{span{color: #317ee7;}}
+					}
+				}
+				.hover{
+					display: none;background: #fff;border: #ddd solid 1px;position: absolute;top: 30px;left: 0;line-height: 25px;width: 125px;padding: 8px 0px;z-index: 7;
+					ul{
+						margin-left: 15px;
+					}
+				}
+//				&:hover{
+//					background-color: #fff;
+//					.default{border: #ddd solid 1px;padding: 0px 0px 0px 9px;border-bottom: 0;background-color: #fff;}
+//					.hover{
+//						display: block;
+//
+//					}
+//				}
+			}
+			.no-message{
+				position: relative;margin-top: 5px;height: 25px;@include inline-block;width: auto;
+				i{display: block;width: 15px;height: 15px;background: url('../images/ico-index-2015.png') -28px 0;z-index: 9;float: left;margin-top: 6px;margin-right: 3px;
+					&.arrow{background-position: 0px -24px;z-index: 10;margin-top: 6px;margin-left: 3px;}
+				}
+				em{color: #fb5651;}
+				.default{
+					position: relative;z-index: 8;padding: 1px 1px 0px 10px;width: auto;height: 30px;line-height: 25px;
+					span{margin-right: 2px;float: left;}
+					em{float: left;}
+					a{
+						&:hover{span{color: #317ee7;}}
+					}
+				}
+				.hover{
+					display: none;background: #fff;border: #ddd solid 1px;position: absolute;top: 30px;left: 0;line-height: 25px;width: 125px;padding: 8px 0px;z-index: 7;
+					p{color: #555;width: 100%;text-align: center;padding: 20px 0px;}
+				}
+//				&:hover{
+//					background-color: #fff;
+//					.default{border: #ddd solid 1px;padding: 0px 0px 0px 9px;border-bottom: 0;background-color: #fff;}
+//					.hover{
+//						display: block;
+//					}
+//				}
+			}
+		}
+	}
+	.fr{
+		dl{
+			@include inline-block;
+			dt{float: left;margin-left: 7px;
+				a{
+					padding-left: 26px;display: block;position: relative;height: 15px;
+					i{display: block;width: 25px;height: 15px;background: url('../images/ico-index-2015.png') -88px 0;position: absolute;left: 0;top: 10px;}
+				}
+			}
+			dd{float: left;position: relative;@include inline-block;
+				.default{
+					position: relative;z-index: 8;padding: 1px 10px 1px 10px;width: auto;height: 28px;line-height: 23px;margin-top: 5px;
+					span{margin-right: 2px;float: left;}
+					i{display: block;width: 15px;height: 15px;background: url('../images/ico-index-2015.png') 0 -25px;float: left;margin-top: 6px;margin-left: 2px;}
+				}
+				i{
+					&.line{float: left;display: block;width: 2px;height: 14px;border-right: #ccc solid 1px;position: absolute;right: 2px;top: 11px;}
+				}
+				.hover{
+					display: none;background: #fff;border: #ddd solid 1px;position: absolute;top: 33px;line-height: 28px;padding-top: 6px;padding-bottom: 8px;z-index: 7;
+					ul{
+						text-indent: 13px;
+						&.member{
+							width: 95px;
+						}
+						&.service{
+							width: 95px;
+						}
+						&.category{
+							width: 230px;margin-top: 5px;
+							li{float: left;margin-right: 20px;}
+						}
+						&.navigation{
+							float: left;border-right: #ddd solid 1px;text-indent: 25px;height: 145px;margin: 8px 0px;
+							li{
+								float: left;margin-right: 10px;
+								a{
+									&.pink{color: #fb5651;}
+								}
+								&.tit{font-size: 16px;color: #333;font-weight: bold;width: 100%;margin-bottom: 5px;
+									&.blue{color: #317ee7;}
+								}
+								&.w100{width: 100%;}
+							}
+						}
+						&.b0{border: 0;}
+						&.w210{width: 210px;}
+						&.w150{width: 150px;
+							li{width: 100%;}
+						}
+						&.w140{width: 140px;
+							li{width: 100%;}
+						}
+						&.w230{width: 230px;}
+					}
+				}
+				.psr{right: 0;width: 740px;}
+				&:hover{
+					.default{border: #ddd solid 1px;padding: 0px 9px 0px 9px;border-bottom: 0;background-color: #fff;}
+					.hover{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+//new topsearch
+.search_new{
+	@include inline-block;width: 100%;
+	.logo{float: left;display: block;width: 200px;height: 75px;background: url('../images/ico-index-2015.png') 0 -430px;margin-top: 20px;}
+	.search{float: left;margin-left: 130px;@include inline-block;width: 720px;margin-top: 20px;
+		.tab{
+			@include inline-block;width: 100%;float: left;
+			li{float: left;cursor: pointer;background: #f0f0f0;color: #555;margin-right: 2px;height: 22px;line-height: 22px;padding: 0 18px;
+				&.cur{color: #fff;background: #317ee7;}
+				&:hover{color: #fff;background: #317ee7;}
+			}
+		}
+		.so{
+			@include inline-block;float: left;
+			input[type="text"]{float: left;border: 0;background: #fff;width: 540px;height: 30px;line-height: 30px;border: #317ee7 solid 2px;border-right: 0;}
+			.btn04{width: 92px;text-align: center;display: block;height: 36px;line-height: 36px;color: #fff;font-size: 16px;border: 0;float: left;}
+			.link{float: left;margin-left: 20px;color: #317ee7;
+				&:hover{color: #FF771C;}
+			}
+		}
+		.link{float: left;margin-left: 20px;}
+		.keyword{
+			@include inline-block;float: left;width: 640px;margin-top: 8px;
+			a{
+				float: left;color: #777;margin-right: 8px;
+				&:hover{color: #317ee7;}
+				&.more{display: block;float: right;border: #ddd solid 1px;width: 35px;height: 15px;line-height: 15px;text-align: center;margin-right: 0px;}
+			}
+		}
+	}
+}
+
+//new memu
+.menu_new{
+	width: 100%;border-bottom: #317ee7 solid 3px;margin-top: 30px;display: inline-block;float: left;position: relative;z-index: 3;
+	.nav{@include inline-block;width: 100%;float: left;
+		.spec{float: left;width: 210px;height: 40px;
+			h2{line-height: 40px;background: #317ee7;text-indent: 15px;font-size: 16px;color: #fff;font-weight: bold;}
+			.drop-memu{
+				border: #317ee7 solid 2px;@include inline-block;padding-top: 5px;
+				dl{@include inline-block;float: left;width: 176px;padding: 12px 15px;border-bottom: dotted 1px #ddd;
+					dt{width: 100%;@include inline-block;margin-bottom: 7px;float: left;
+						span{font-size: 14px;color: #3c3c3c;font-weight: bold;float: left;}
+						a{float: right;display: block;border: #ddd solid 1px;width: 35px;height: 15px;line-height: 15px;text-align: center;color: #777;margin-top: 3px;
+							&:hover{color: #317ee7;}
+						}
+					}
+					dd{
+						width: 107%;float: left;
+						a{color: #3c3c3c;margin-right: 23px;margin-bottom: 5px;display: block;float: left;
+							&:hover{color: #317ee7;}
+						}
+					}
+					&.bd0{border: 0;}
+					.ie7 &{padding: 15px 15px;}
+				}
+			}
+		}
+		ul{
+			&.link{
+				float: left;@include inline-block;margin-left: 25px;
+				li{
+					float: left;margin-right: 40px;height: 40px;line-height:37px;
+					a{
+						color: #333;font-size: 16px;
+						&.cur{color: #317ee7;
+							&:hover{color: #FF771C;}
+						}
+						&:hover{color: #2c6dc6;}
+					}
+				}
+			}
+		}
+		.tel{float: right;@include inline-block;margin-top: 3px;
+			i{display: inline-block;width: 26px;height: 25px;background: url('../images/ico-index-2015.png') -212px 6px;float: left;}
+			span{display: inline-block;color: #333;font-size: 14px;float: left;margin-top: 5px;
+				&.num{font-size: 20px;margin-top: 0;}
+				&.time{color: #999;margin-left: 3px;}
+			}
+		}
+	}
+}
+
+.foot_new{
+	width: 100%;background: #fafafa;border-top: #ddd solid 1px;border-bottom: #ddd solid 1px;margin-top: 20px;padding-top: 30px;
+	.map{
+		width: 100%;@include inline-block;
+		.fl{
+
+			dl{
+				float: left;width: 150px;
+				dt{font-size: 16px;color: #333;margin-bottom: 10px;}
+				dd{
+					margin-bottom: 10px;
+					a{	color: #777;
+						&:hover{color: #0f80e3;}
+					}
+				}
+				&.last{width: 100px;}
+			}
+		}
+		.fr{
+			@include inline-block;border-left: #ddd solid 1px;padding-left: 40px;
+			.ps{
+				float: left;
+				h2{font-weight: bold;font-size: 14px;color: #333;margin-bottom: 10px;}
+				p{color: #555;line-height: 24px;}
+			}
+			.code{
+				float: left;@include inline-block;position: relative;padding-top: 20px;
+				i{display: block;width: 111px;height: 15px;background: url('../images/ico-index-2015.png') -386px -30px;position: absolute;right: 0;top: 0;font-size: 0;}
+				p{float: left;width: 100px;text-align: center;color: #555;margin-top: 15px;margin-left: 20px;}
+			}
+		}
+	}
+	.so{
+		margin-top: 20px;padding-top: 10px;border-top: #ddd solid 1px;@include inline-block;width: 100%;
+		.fl{
+			.logo{
+			float: left;display: block;width: 300px;height: 75px;background: url('../images/ico-index-2015.png')0px -547px;margin-top: 20px;
+			}
+			.form{float: left;margin-top: 30px;margin-left: 40px;
+				input {float: left;background:#FFF;width:420px; height: 30px;line-height: 30px;border: #ddd solid 1px;border-right: 0;}
+				.btn{width: 80px;text-align: center;display: block;height: 34px;line-height: 34px;color: #555;font-size: 14px;float: left;background: #e8eaef;border: #ddd solid 1px;}
+			}
+		}
+		.fr{
+			h2{
+				font-size: 14px;color: #333;margin-bottom: 5px;margin-top: 7px;text-align: right;
+				em{font-size: 20px;color: #ff771c;}
+			}
+			h3{
+				@include inline-block;width: 100%;
+				.click{display: block;width: 111px;height: 20px;background: url('../images/ico-index-2015.png') -397px -3px no-repeat;float: right;font-size: 0;margin-top: 8px;}
+				.btn05{width: 120px;text-align: center;display: block;height: 32px;line-height: 32px;color: #fff;font-size: 14px;float: right;}
+			}
+		}
+	}
+}
+
+.bottom{
+	text-align: center;padding-top: 30px;padding-bottom: 30px;
+	.nav{
+		a{	color: #777;padding: 0 15px;height: 15px;line-height: 15px;border-right: #b7b7b7 solid 1px;
+			&:hover{color: #0f80e3;}
+			&.bd0{border: 0;}
+		}
+	}
+	p{width: 100%;color: #777;margin-top: 10px;}
+	.link{
+		@include inline-block;width: 100%;margin-top: 15px;padding-top: 10px;border-top: 1px dotted #ddd;border-bottom:1px dotted #ddd ;padding-bottom: 10px;
+		.fl{color: #999;width: 100px;text-align: right;}
+		a{color: #999;height: 20px;line-height: 20px;margin-right: 40px;float: left;
+			&:hover{color: #0f80e3;}
+		}
+		.list{margin-left: 10px;float: left;}
+	}
+}
+
+.fix_nav{
+	position: fixed;right: 10px;top: 50%;margin-top: -160px;z-index: 9999;
+	ul{
+		li{
+			width: 60px;height: 60px;margin-bottom: 5px;
+			a{
+				display: block;width: 100%;height: 100%;text-align: center;border: #ddd solid 1px;color: #aaa;background: #fff;
+				i{width: 25px;height: 25px;display: block;background: url('../images/ico-index-2015.png');margin: 8px auto;margin-bottom: 5px;
+					&.i1{background-position: -196px -80px;}
+					&.i2{background-position: -198px -144px;}
+					&.i3{background-position: -196px -211px;}
+					&.i4{background-position: -196px -276px;}
+					&.i5{background-position: -196px -339px;}
+				}
+				&:hover{
+					color: #fff;background: #488fef;border: #488fef solid 1px;
+					i{
+						&.i1{background-position: -141px -80px;}
+						&.i2{background-position: -143px -144px;}
+						&.i3{background-position: -141px -211px;}
+						&.i4{background-position: -141px -276px;}
+						&.i5{background-position: -141px -339px;}
+					}
+				}
+				&.cur{
+					color: #fff;background: #488fef;border: #488fef solid 1px;
+					i{
+						&.i1{background-position: -141px -80px;}
+						&.i2{background-position: -142px -144px;}
+						&.i3{background-position: -141px -211px;}
+						&.i4{background-position: -141px -276px;}
+						&.i5{background-position: -141px -339px;}
+					}
+				}
+			}
+			&.top{display: none;}
+		}
+	}
+}

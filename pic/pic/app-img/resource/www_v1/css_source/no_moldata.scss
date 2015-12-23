@@ -1,0 +1,18 @@
+@charset "UTF-8";			// [中文 UTF-8]
+@import "compass";
+@import "pub_css/c-z-reset.scss";
+@import "pub_css/mixin.scss";
+@import "pub_css/c-z-new-public.scss";
+.list_pag{
+		    height:36px;line-height:36px;background:#f7f7f7;border:1px solid #eee;padding-left:10px;color:#888;@include inline-block;width:1188px;
+	}
+	.list_pager_log{
+	        width:1198px; @include inline-block;height:350px;border:1px solid #ddd;margin:10px 0;
+	        .pager_hier{width:300px;position:relative;padding:110px 0 0  582px;
+	            i{width:66px;height:67px;background:url('../../images/member/raey_03.jpg') no-repeat;position:absolute;left:490px;}
+	            .p1{font-size:20px;margin-bottom:10px;}
+	            p{padding-bottom:10px;
+                   .btn04{padding:0 16px;text-align:center;line-height:30px;height:30px;display: inline-block;color:#fff;}
+	            }
+            }
+	}

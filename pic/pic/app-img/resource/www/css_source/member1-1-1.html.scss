@@ -1,0 +1,143 @@
+@import "member.html.scss";
+// ICO
+@import "ico-member/*.png";
+@include all-ico-member-sprites;
+
+.detail-top{
+		background: #f0f3f4;display: inline-block;width:100%;padding:10px 10px;
+		span{
+			float:left;font-size:18px;color: $co-3;
+		}
+		.link{
+			float:right;margin-top: 5px;
+			a{
+				margin-right:10px;margin-left:20px;
+			}
+		}
+}
+.detail-con{
+		width:96%;margin:0px auto;padding-bottom:20px;
+		.status{
+			display: inline-block;width:100%;margin-top:40px;
+			.step{
+				width:960px;height:24px;
+			}
+			ul{
+				padding-left:20px;margin-top: 5px;
+				li{
+					float:left;text-align: center;width: 185px;
+					h2{
+						color: $co-3;font-size: 14px;
+					}
+					p{
+						color: #bbb;
+					}
+					&.w180{
+						width:180px;
+					}
+				}
+			}
+		}
+		.log{
+			display: inline-block;width:100%;
+			ul{
+				padding-left: 20px;
+				li{
+					float:left;display: inline-block;width:100%;border-left:$co-d solid 2px;padding-bottom:10px;position: relative;
+					i{
+						display:inline-block;width:10px;height:10px;float:left;margin-left: -6px;margin-top: 3px;
+						&.ico-member-log-2{
+							position: absolute;top:0px;left:12px;width:26px;height:11px;font-size: 0px;
+						}
+					}
+					span{
+						display: inline-block;width: 14%;float:left;color:$co-7; white-space:nowrap; text-overflow:ellipsis;overflow:hidden;padding-right: 1%;
+						&.w{
+							width:64%;padding-left:4%;
+						}
+					}
+					&.cur{
+						i{margin-top:0px;}
+						span{margin-top:-2px;color:$co-pink}
+					}
+				}
+			}
+		}
+		.info{
+			ul{
+				li{
+					display: inline-block;width:100%;margin-bottom:5px;
+					div{
+						float:left;display: inline-block;width:33%;
+						span{width: 68%;}
+					}
+					label{float:left;display: inline-block;width:100px;text-align: right;color: $co-7;}
+					span{float:left;display: inline-block;width: 80%;color: $co-3;}
+				}
+			}
+		}
+		.reply{
+			th{
+				text-align: center;
+				&.th9{padding-left:10px;text-align: left;}
+				&.th10{padding-left:10px;text-align: left;width:35%}
+			}
+			td{
+				text-align: center;color:$co-5;padding: 0;height:auto;padding:12px 0px;
+				&.td0{text-align: left;padding-left:10px;text-indent: 0;}
+			}
+			.num{
+				display: inline-block;width:100%;
+				span{
+					font-size: 14px;margin-left: 5px;margin-right: 8px;
+					em{color: $co-pink;margin-left: 3px;margin-right: 3px;}
+					a{float:left;display: inline-block;}
+					i{
+						float:left;display: inline-block;width:11px;height:6px;margin-left: 5px;margin-top: 8px;
+
+					}
+				}
+			}
+			h4{font-size: 16px;color: $co-3;margin-top:15px;}
+		}
+		.submit{
+			ul{
+				li{
+					margin-bottom:15px;display: inline-block;width:100%;
+					label{width:100px;text-align: right;color:$co-7;display: inline-block;font-size: 14px;float: left;}
+					input{width:340px;height:30px;color:$co-9;font-size: 14px;float: left;}
+					select{width:340px;height:30px;}
+					textarea{width:690px;height:100px;resize:none;float: left;}
+					button{
+						display: inline-block;border:0;border-radius:5px;padding:10px 35px;font-size: 16px;margin-right:20px;
+						&.btn-bg{margin-left:100px;color:$co-f}
+						&.reset{color:$co-5;}
+					}
+					.select{position:relative;float:left;margin:0 0px;
+						dt{ border:1px solid #e6e6e6;width:330px;height:30px;background:#fff image-url('down.png') no-repeat 315px center;
+							line-height:30px;padding-left:8px;cursor:pointer;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;position:relative;z-index:99;
+							&:hover{box-shadow: 0 0 5px   rgba(15, 128, 227, 0.5);}
+							&.cur{box-shadow: 0 0 5px   rgba(15, 128, 227, 0.5);}
+							.ie7 &{height: 30px;line-height: 30px;}
+						}
+
+
+						dd{position:absolute;left:0px;top:30px;border:1px solid #e6e6e6;background:#fff;display:none; margin: 0; padding: 0;z-index: 9999;
+								ul{width:338px;overflow:hidden; list-style: none; margin: 0; padding: 0;
+									li{margin-bottom: 0px;height: 28px;line-height: 0;display: inline;
+										a{line-height:28px;display:block;text-decoration:none; color:#666; font-size: 14px;text-align: left;text-indent: 10px;
+											&:hover{background:#f1f1f1;}
+										}
+									}
+
+								}
+								&.top34{top: 34px;}
+						}
+	}
+				}
+			}
+		}
+		h3{
+			color: $co-3;font-size: 18px;font-weight: bold;padding-bottom:10px;border-bottom:#eeeeee solid 1px;margin-top:50px;margin-bottom: 15px;
+		}
+}

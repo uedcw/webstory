@@ -1,0 +1,19 @@
+@import "member.html.scss";
+.ps{
+	margin-top:20px;
+	h2{font-size: 15px;font-weight: bold; border-bottom:#eeeeee solid 1px ;text-indent: 10px;padding-bottom:5px;}
+	p{margin-top: 10px; color:$co-7;line-height: 24px;}
+}
+
+.tab-con{
+		table{
+				th{
+					&.pl10{padding-left: 10px;}
+					&.pr10{padding-right: 10px;}
+				}
+				td{
+					&.pl10{padding-left: 10px;}
+					&.pr10{padding-right: 10px;}
+				}
+			}
+}
